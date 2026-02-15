@@ -1,0 +1,424 @@
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+html, body{
+    overflow-x:hidden;
+}
+
+body{
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* ================= HERO ================= */
+
+.dept-hero{
+    height:320px;
+    background:linear-gradient(rgba(0,34,68,0.85),rgba(0,34,68,0.85)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:0 20px;
+}
+
+.hero-overlay h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero-overlay p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* ================= COMMON SECTION ================= */
+
+.dept-section{
+    padding:70px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    color:#002244;
+    margin-bottom:25px;
+    font-size:26px;
+    position:relative;
+    padding-bottom:10px;
+}
+
+h2::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:60px;
+    height:3px;
+    background:#8b0000;
+    border-radius:2px;
+}
+
+/* ================= ABOUT GRID ================= */
+
+.dept-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.dept-grid p{
+    font-size:16px;
+    color:#444;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.dept-main-layout{
+    display:flex;
+    gap:60px;
+    padding:80px 30px;
+    max-width:1200px;
+    margin:auto;
+    flex-wrap:wrap;
+    background:linear-gradient(to bottom, #ffffff, #f8f9fb);
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+
+/* ================= LEFT PANEL (HOD) ================= */
+
+.left-panel{
+    flex:1;
+    min-width:300px;
+    animation:slideLeft 0.6s ease forwards;
+    opacity:0;
+}
+
+/* HOD PHOTO */
+
+.hod-photo{
+    display:inline-block;
+    padding:6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:16px;
+    background:#ffffff;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+    transition:0.4s ease;
+}
+
+.hod-photo img{
+    width:100%;
+    max-width:300px;
+    border-radius:12px;
+    display:block;
+    border:2px solid #ffffff;  /* College blue theme */
+    transition:0.4s ease;
+}
+
+/* Soft Hover Effect */
+.hod-photo:hover{
+    transform:translateY(-5px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.18);
+}
+
+.hod-photo:hover img{
+    transform:scale(1.03);
+}
+
+
+/* HOD CONTENT */
+
+.hod-content p{
+    font-size:15px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:12px;
+}
+
+.hod-name{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:600;
+    color:#002244;
+    display:inline-block;
+    position:relative;
+}
+
+.hod-name::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background:#8b0000;
+}
+
+.hod-designation{
+    margin-top:10px;
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
+
+/* ================= RIGHT PANEL (FACULTY) ================= */
+
+.right-panel{
+    flex:1;
+    min-width:300px;
+    animation:slideRight 0.6s ease forwards;
+    opacity:0;
+}
+
+/* ================= FACULTY GRID ================= */
+
+.faculty-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+/* ================= FACULTY CARD ================= */
+
+.faculty-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.4s ease;
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+}
+
+.faculty-card:nth-child(1){ animation-delay:0.1s; }
+.faculty-card:nth-child(2){ animation-delay:0.2s; }
+.faculty-card:nth-child(3){ animation-delay:0.3s; }
+.faculty-card:nth-child(4){ animation-delay:0.4s; }
+
+.faculty-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.15);
+}
+
+/* FACULTY IMAGE (CIRCLE) */
+
+.faculty-card img{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:0 auto 15px auto;
+    border:4px solid #002244;
+    transition:0.4s ease;
+}
+
+.faculty-card:hover img{
+    transform:scale(1.1);
+    border-color:#8b0000;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* FACULTY TEXT */
+
+.faculty-card h4{
+    font-size:16px;
+    margin-bottom:6px;
+    color:#002244;
+    font-weight:600;
+}
+
+.faculty-card p{
+    font-size:14px;
+    color:#666;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes slideLeft{
+    from{
+        transform:translateX(-20px);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes slideRight{
+    from{
+        transform:translateX(20px);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        transform:translateY(25px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .dept-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dept-main-layout{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-overlay h1{
+        font-size:26px;
+    }
+
+    .hero-overlay p{
+        font-size:15px;
+    }
+
+    .faculty-grid{
+        grid-template-columns:1fr;
+    }
+}
+/* ================= DEPARTMENT SECTION ================= */
+
+.dept-section{
+    padding:90px 10%;
+    background:linear-gradient(135deg,#eef2f7,#e3ebf5,#f8fbff);
+}
+
+/* grid */
+.dept-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+}
+
+/* card */
+.dept-grid > div{
+    background:#ffffff;
+    padding:45px;
+    border-radius:16px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.08);
+    position:relative;
+    transition:0.4s;
+    border-top:5px solid transparent;
+    background-clip:padding-box;
+}
+
+/* top gradient professional border */
+.dept-grid > div::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#002147,#0056b3,#0088cc);
+    border-radius:16px 16px 0 0;
+}
+
+/* hover */
+.dept-grid > div:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* heading */
+.dept-section h2{
+    font-size:30px;
+    color:#002147;
+    margin-bottom:18px;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+
+/* underline */
+.dept-section h2::after{
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    background:#0056b3;
+    margin-top:6px;
+    border-radius:5px;
+}
+
+/* text */
+.dept-section p{
+    font-size:17px;
+    color:#444;
+    line-height:1.9;
+}
+
+/* subtle floating */
+.dept-grid > div{
+    animation:softFloat 5s ease-in-out infinite;
+}
+
+.dept-grid > div:nth-child(2){
+    animation-delay:2s;
+}
+
+@keyframes softFloat{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+    100%{transform:translateY(0);}
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .dept-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .dept-section{
+        padding:60px 20px;
+    }
+
+    .dept-section h2{
+        font-size:24px;
+    }
+
+    .dept-section p{
+        font-size:16px;
+    }
+}
