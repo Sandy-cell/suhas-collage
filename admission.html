@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission Form - Suhas Institute</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+.form-header{
+    background:#002244;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.form-header h1{
+    margin:0;
+}
+
+/* FORM SECTION */
+
+.form-section{
+    padding:60px 20px;
+}
+
+.form-container{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.form-container h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#002244;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#333;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline:none;
+    border-color:#002244;
+}
+
+/* BUTTON */
+
+.submit-btn{
+    width:100%;
+    padding:12px;
+    background:#00cc66;
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#00aa55;
+}
+
+.success-msg{
+    margin-top:15px;
+    color:green;
+    text-align:center;
+    font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="form-header">
+<h1 data-en="Admission Form 2026-27"
+    data-mr="प्रवेश अर्ज फॉर्म 2026-27">
+Admission Form 2026-27
+</h1>
+</div>
+
+<!-- FORM -->
+<section class="form-section">
+
+<div class="form-container">
+
+<h2 data-en="Apply for Diploma Engineering"
+    data-mr="डिप्लोमा अभियांत्रिकीसाठी अर्ज करा">
+Apply for Diploma Engineering
+</h2>
+
+<form id="admissionForm">
+
+<div class="form-group">
+<label data-en="Full Name" data-mr="पूर्ण नाव">Full Name</label>
+<input type="text" required>
+</div>
+
+<div class="form-group">
+<label data-en="Mobile Number" data-mr="मोबाईल क्रमांक">Mobile Number</label>
+<input type="tel" required>
+</div>
+
+<div class="form-group">
+<label data-en="Email Address" data-mr="ईमेल पत्ता">Email Address</label>
+<input type="email">
+</div>
+
+<div class="form-group">
+<label data-en="Select Department" data-mr="शाखा निवडा">Select Department</label>
+<select required>
+<option>Computer Engineering</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Electrical Engineering</option>
+</select>
+</div>
+
+<div class="form-group">
+<label data-en="10th Percentage" data-mr="10 वी टक्केवारी">10th Percentage</label>
+<input type="number" step="0.01" required>
+</div>
+
+<div class="form-group">
+<label data-en="Address" data-mr="पत्ता">Address</label>
+<textarea rows="3"></textarea>
+</div>
+
+<button type="submit" class="submit-btn"
+data-en="Submit Application"
+data-mr="अर्ज सबमिट करा">
+Submit Application
+</button>
+
+<div class="success-msg" id="successMessage"></div>
+
+</form>
+
+</div>
+
+</section>
+
+<script>
+
+/* Simple Success Message */
+document.getElementById("admissionForm").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("successMessage").innerText="Application Submitted Successfully!";
+this.reset();
+});
+
+</script>
+
+</body>
+</html>

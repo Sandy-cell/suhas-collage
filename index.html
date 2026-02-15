@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhas Institute of Technology</title>
+<!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+ <img src="images/logo.png" alt="Suhas Institute Logo">
+
+    <div class="college-name">
+
+        <p data-en="Nanasaheb Thombre Education Trust"
+           data-mr="नानासाहेब ठोंबरे शिक्षण संस्था">
+           Nanasaheb Thombre Education Trust
+        </p>
+
+        <h1 data-en="Suhas Institute of Technology"
+            data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी">
+            Suhas Institute of Technology
+        </h1>
+
+        <h2 data-en="(Engineering  Polytechnic College)"
+            data-mr="(अभियांत्रिकी तंत्रनिकेतन महाविद्यालय)">
+            (Engineering Diploma College)
+        </h2>
+
+        <p data-en="Accredited by Maharashtra Government | AICTE | DTE | Affiliated to MSBTE"
+           data-mr="महाराष्ट्र शासन मान्यताप्राप्त | AICTE | DTE | MSBTE संलग्न">
+           Accredited by Maharashtra Government | AICTE | DTE | Affiliated to MSBTE
+        </p>
+    </div>
+<!-- Language Buttons -->
+<div class="language-box">
+
+    <div class="toggle-container">
+
+        <span class="lang-label">English</span>
+
+        <label class="toggle-switch">
+            <input type="checkbox" id="languageToggle">
+            <span class="toggle-slider"></span>
+        </label>
+
+        <span class="lang-label">मराठी</span>
+
+    </div>
+
+</div>
+</header>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="index.html"
+           data-en="Home"
+           data-mr="मुख्यपृष्ठ">
+           Home
+        </a>
+
+        <a href="#"
+           data-en="About Us"
+           data-mr="आमच्याबद्दल">
+           About Us
+        </a>
+
+        <a href="#"
+           data-en="Academics"
+           data-mr="शैक्षणिक विभाग">
+           Academics
+        </a>
+
+        <a href="#"
+           data-en="Courses Offered"
+           data-mr="उपलब्ध अभ्यासक्रम">
+           Courses Offered
+        </a>
+    
+        <!-- Departments Dropdown -->
+    <div class="dropdown">
+
+            <span class="dropbtn"
+                  onclick="toggleDropdown()"
+                  data-en="Departments"
+                  data-mr="विभाग">
+                  Departments
+            </span>
+    
+    <div class="dropdown-content" id="deptDropdown">
+
+                <a href="department/computer/computer.html"
+                   data-en="Computer Engineering"
+                   data-mr="संगणक अभियांत्रिकी">
+                   Computer Engineering
+                </a>
+
+                <a href="department/mechanical/mechanical.html"
+                   data-en="Mechanical Engineering"
+                   data-mr="यांत्रिक अभियांत्रिकी">
+                   Mechanical Engineering
+                </a>
+
+                <a href="department/civil/civil.html"
+                   data-en="Civil Engineering"
+                   data-mr="स्थापत्य अभियांत्रिकी">
+                   Civil Engineering
+                </a>
+
+                <a href="department/electrical/electrical.html"
+                   data-en="Electrical Engineering"
+                   data-mr="विद्युत अभियांत्रिकी">
+                   Electrical Engineering
+                </a>
+        </div>  
+    </div>
+     <a href="#"
+           data-en="Campus Life"
+           data-mr="कॅम्पस जीवन">
+           Campus Life
+        </a>
+
+        <a href="#"
+           data-en="Facilities"
+           data-mr="सुविधा">
+           Facilities
+        </a>
+
+        <a href="staff/staff.html"
+           data-en="Staff"
+           data-mr="कर्मचारी">
+           Staff
+        </a>
+</nav>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section class="about-section">
+    <div class="about-container">
+
+        <div class="about-image">
+            <div class="slider">
+                <img src="images/collage.png" class="slide active" alt="College Campus">
+                <img src="images/principal-office.png" class="slide" alt="Students in Classroom">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" class="slide" alt="Engineering Laboratory">
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <h2 data-en="About Us"
+                data-mr="आमच्याबद्दल">
+                About Us
+            </h2>
+
+            <p data-en="Suhas Institute of Technology, Karsurdi is approved by AICTE & DTE Maharashtra and affiliated to MSBTE, offering quality diploma engineering education with a student-centric and practice-oriented approach."
+               data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी, कारसुरडी हे AICTE व DTE महाराष्ट्र मान्यताप्राप्त असून MSBTE संलग्न आहे. आम्ही विद्यार्थी-केंद्रित आणि प्रात्यक्षिक आधारित गुणवत्तापूर्ण डिप्लोमा अभियांत्रिकी शिक्षण प्रदान करतो.">
+               Suhas Institute of Technology, Karsurdi is approved by AICTE & DTE Maharashtra and affiliated to MSBTE, offering quality diploma engineering education with a student-centric and practice-oriented approach.
+            </p>
+
+            <p data-en="We focus on overall student development, including academics, practical skills, discipline, teamwork, and leadership. Our modern labs, skilled faculty, and industry-relevant curriculum prepare students for higher education, industry, and entrepreneurship."
+               data-mr="आमचा भर विद्यार्थ्यांच्या सर्वांगीण विकासावर आहे – शैक्षणिक ज्ञान, प्रात्यक्षिक कौशल्य, शिस्त, टीमवर्क आणि नेतृत्व गुणांचा विकास. आमच्या आधुनिक प्रयोगशाळा, कुशल प्राध्यापक आणि उद्योगस्नेही अभ्यासक्रमामुळे विद्यार्थी उच्च शिक्षण, उद्योग आणि उद्योजकतेसाठी तयार होतात.">
+               We focus on overall student development, including academics, practical skills, discipline, teamwork, and leadership. Our modern labs, skilled faculty, and industry-relevant curriculum prepare students for higher education, industry, and entrepreneurship.
+            </p>
+
+            <p data-en="Located in a safe and eco-friendly campus at Karsurdi, Tal. Daund, Dist. Pune, we provide a supportive and motivating learning environment."
+               data-mr="कारसुरडी, ता. दौंड, जि. पुणे येथे सुरक्षित व पर्यावरणपूरक कॅम्पसमध्ये आम्ही प्रेरणादायी आणि सहकार्यपूर्ण शिक्षण वातावरण उपलब्ध करून देतो.">
+               Located in a safe and eco-friendly campus at Karsurdi, Tal. Daund, Dist. Pune, we provide a supportive and motivating learning environment.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= DEPARTMENTS SECTION ================= -->
+<section class="dept-section">
+
+    <h2 class="section-title"
+        data-en="🏢 Departments"
+        data-mr="🏢 विभाग">
+        🏢 Departments
+    </h2>
+
+    <p class="dept-subtitle"
+       data-en="Each department is equipped with modern infrastructure and skilled faculty."
+       data-mr="प्रत्येक विभाग आधुनिक सुविधा व कुशल प्राध्यापकांनी सुसज्ज आहे.">
+       Each department is equipped with modern infrastructure and skilled faculty.
+    </p>
+
+    <div class="dept-container">
+
+        <div class="dept-card">
+            <h3 data-en="💻 Computer Engineering"
+                data-mr="💻 संगणक अभियांत्रिकी">
+                💻 Computer Engineering
+            </h3>
+        </div>
+
+        <div class="dept-card">
+            <h3 data-en="⚙ Mechanical Engineering"
+                data-mr="⚙ यांत्रिक अभियांत्रिकी">
+                ⚙ Mechanical Engineering
+            </h3>
+        </div>
+
+        <div class="dept-card">
+            <h3 data-en="🏗 Civil Engineering"
+                data-mr="🏗 स्थापत्य अभियांत्रिकी">
+                🏗 Civil Engineering
+            </h3>
+        </div>
+
+        <div class="dept-card">
+            <h3 data-en="⚡ Electrical Engineering"
+                data-mr="⚡ विद्युत अभियांत्रिकी">
+                ⚡ Electrical Engineering
+            </h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ADMISSION SECTION ================= -->
+
+<section class="admission-section">
+
+    <div class="admission-container">
+
+        <h2 data-en="Admissions Open"
+            data-mr="प्रवेश प्रक्रिया सुरू ">
+            Admissions Open 
+        </h2>
+
+        <p data-en="Suhas Institute of Technology invites applications for Diploma Engineering programs in Computer, Mechanical, Civil and Electrical Engineering."
+           data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी मध्ये संगणक, यांत्रिक, स्थापत्य आणि विद्युत अभियांत्रिकी डिप्लोमा अभ्यासक्रमांसाठी प्रवेश सुरू आहेत.">
+           Suhas Institute of Technology invites applications for Diploma Engineering programs in Computer, Mechanical, Civil and Electrical Engineering.
+        </p>
+
+        <p data-en="Eligible candidates can apply through the centralized admission process (CAP) conducted by DTE Maharashtra."
+           data-mr="पात्र उमेदवारांनी DTE महाराष्ट्र मार्फत आयोजित केंद्रीकृत प्रवेश प्रक्रिया (CAP) द्वारे अर्ज करावा.">
+           Eligible candidates can apply through the centralized admission process (CAP) conducted by DTE Maharashtra.
+        </p>
+
+        <div class="admission-buttons">
+
+            <a href="admission.html"
+               class="admission-btn"
+               data-en="Apply Now"
+               data-mr="आता अर्ज करा">
+               Apply Now
+            </a>
+     </div>
+
+    </div>
+
+</section>
+
+<!-- ================= BENEFITS SECTION ================= -->
+<section class="benefits-left">
+
+<div class="benefits-scroll">
+
+    <div class="benefit-item active">
+        <h4 data-en="🎓 Free Education Support"
+            data-mr="🎓 मोफत शिक्षण सहाय्य योजना">
+            🎓 Free Education Support
+        </h4>
+
+        <p data-en="SC, NT, ST, NBC students eligible as per government norms."
+           data-mr="SC, NT, ST व NBC प्रवर्गातील विद्यार्थ्यांना शासन नियमांनुसार मोफत शिक्षण सुविधा उपलब्ध आहे.">
+           SC, NT, ST, NBC students eligible as per government norms.
+        </p>
+    </div>
+
+    <div class="benefit-item">
+        <h4 data-en="💰 Fee Concession"
+            data-mr="💰 फी सवलत योजना">
+            💰 Fee Concession
+        </h4>
+
+        <p data-en="OBC & Open category – up to 50% concession."
+           data-mr="OBC व Open प्रवर्गातील विद्यार्थ्यांना ५०% पर्यंत फी सवलत उपलब्ध आहे.">
+           OBC & Open category – up to 50% concession.
+        </p>
+    </div>
+
+    <div class="benefit-item">
+        <h4 data-en="🏦 Loan Facilities"
+            data-mr="🏦 शैक्षणिक कर्ज सुविधा">
+            🏦 Loan Facilities
+        </h4>
+
+        <p data-en="Education loan support available for all students."
+           data-mr="सर्व विद्यार्थ्यांसाठी शैक्षणिक कर्ज सुविधा उपलब्ध आहे.">
+           Education loan support available for all students.
+        </p>
+    </div>
+
+    <div class="benefit-item">
+        <h4 data-en="🏏 Playground & Activities"
+            data-mr="🏏 क्रीडा व सहशालेय उपक्रम सुविधा">
+            🏏 Playground & Activities
+        </h4>
+
+        <p data-en="Sports and extra-curricular facilities available."
+           data-mr="क्रीडा व इतर सहशालेय उपक्रमांसाठी सर्व सुविधा उपलब्ध आहेत.">
+           Sports and extra-curricular facilities available.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+<section class="facilities-scroll">
+
+    <h2 data-en="Facilities"
+        data-mr="सुविधा">
+        Facilities
+    </h2>
+
+    <div class="facility-container">
+
+        <div class="facility-track">
+
+            <p data-en="Spacious & Well-Ventilated Classrooms"
+               data-mr="प्रशस्त व हवेशीर वर्गखोल्या">
+               Spacious & Well-Ventilated Classrooms
+            </p>
+
+            <p data-en="Advanced & Modern Laboratories"
+               data-mr="अत्याधुनिक व सुसज्ज प्रयोगशाळा">
+               Advanced & Modern Laboratories
+            </p>
+
+            <p data-en="Computer Center"
+               data-mr="संगणक केंद्र">
+               Computer Center
+            </p>
+
+            <p data-en="Library with Reference & Text Books"
+               data-mr="संदर्भ व पाठ्यपुस्तकांसह सुसज्ज ग्रंथालय">
+               Library with Reference & Text Books
+            </p>
+
+            <p data-en="Internet & Wi-Fi Facility"
+               data-mr="इंटरनेट व वाय-फाय सुविधा">
+               Internet & Wi-Fi Facility
+            </p>
+
+            <p data-en="Workshop & Practical Labs"
+               data-mr="वर्कशॉप व प्रात्यक्षिक प्रयोगशाळा">
+               Workshop & Practical Labs
+            </p>
+
+            <p data-en="Playground & Sports Facilities"
+               data-mr="मैदान व क्रीडा सुविधा">
+               Playground & Sports Facilities
+            </p>
+
+            <p data-en="CCTV Surveillance & Campus Security"
+               data-mr="सीसीटीव्ही देखरेख व कॅम्पस सुरक्षा">
+               CCTV Surveillance & Campus Security
+            </p>
+
+            <p data-en="Parking Facility"
+               data-mr="वाहनतळ सुविधा">
+               Parking Facility
+            </p>
+
+            <!-- Repeat for Smooth Loop -->
+
+            <p data-en="Spacious & Well-Ventilated Classrooms"
+               data-mr="प्रशस्त व हवेशीर वर्गखोल्या">
+               Spacious & Well-Ventilated Classrooms
+            </p>
+
+            <p data-en="Advanced & Modern Laboratories"
+               data-mr="अत्याधुनिक व सुसज्ज प्रयोगशाळा">
+               Advanced & Modern Laboratories
+            </p>
+
+            <p data-en="Computer Center"
+               data-mr="संगणक केंद्र">
+               Computer Center
+            </p>
+
+            <p data-en="Library with Reference & Text Books"
+               data-mr="संदर्भ व पाठ्यपुस्तकांसह सुसज्ज ग्रंथालय">
+               Library with Reference & Text Books
+            </p>
+
+            <p data-en="Internet & Wi-Fi Facility"
+               data-mr="इंटरनेट व वाय-फाय सुविधा">
+               Internet & Wi-Fi Facility
+            </p>
+
+            <p data-en="Workshop & Practical Labs"
+               data-mr="वर्कशॉप व प्रात्यक्षिक प्रयोगशाळा">
+               Workshop & Practical Labs
+            </p>
+
+            <p data-en="Playground & Sports Facilities"
+               data-mr="मैदान व क्रीडा सुविधा">
+               Playground & Sports Facilities
+            </p>
+
+            <p data-en="CCTV Surveillance & Campus Security"
+               data-mr="सीसीटीव्ही देखरेख व कॅम्पस सुरक्षा">
+               CCTV Surveillance & Campus Security
+            </p>
+
+            <p data-en="Parking Facility"
+               data-mr="वाहनतळ सुविधा">
+               Parking Facility
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= QUICK LINKS ================= -->
+
+<div class="quick-links-scroll">
+
+    <a href="https://www.aicte.gov.in/" target="_blank" class="quick-item">
+        <div class="quick-circle">
+            <img src="images/aicte-logo.png">
+        </div>
+        <div class="quick-name">AICTE</div>
+    </a>
+
+    <a href="https://msbte.ac.in/" target="_blank" class="quick-item">
+        <div class="quick-circle">
+            <img src="images/msbte.jpg">
+        </div>
+        <div class="quick-name">MSBTE</div>
+    </a>
+
+    <a href="https://dte.maharashtra.gov.in/" target="_blank" class="quick-item">
+        <div class="quick-circle">
+            <img src="images/dte.jpg">
+        </div>
+        <div class="quick-name">DTE</div>
+    </a>
+
+    <a href="https://mahadbt.maharashtra.gov.in/login/login" target="_blank" class="quick-item">
+        <div class="quick-circle">
+            <img src="images/mahadbt.png">
+        </div>
+        <div class="quick-name">MAHADBT</div>
+    </a>
+
+    <a href="https://www.abc.gov.in/" target="_blank" class="quick-item">
+        <div class="quick-circle">
+            <img src="images/abc.png">
+        </div>
+        <div class="quick-name">ABC</div>
+    </a>
+
+</div>
+<section class="vision-mission">
+
+<div class="mission-box">
+
+<h2 data-en="Mission"
+    data-mr="ध्येय">
+    Mission
+</h2>
+
+<p data-en="To impart state-of-the-art technical education and practical skills to students and provide continuous training to faculty for academic excellence. We aim to develop competent, responsible, and self-reliant professionals who contribute positively to society and nation-building."
+   data-mr="विद्यार्थ्यांना अत्याधुनिक तांत्रिक शिक्षण व प्रात्यक्षिक कौशल्य प्रदान करणे तसेच प्राध्यापकांना शैक्षणिक उत्कृष्टतेसाठी सतत प्रशिक्षण देणे हे आमचे ध्येय आहे. सक्षम, जबाबदार व आत्मनिर्भर व्यावसायिक घडवून त्यांना समाज व राष्ट्रनिर्मितीत सकारात्मक योगदान देण्यासाठी तयार करणे हा आमचा उद्देश आहे.">
+   To impart state-of-the-art technical education and practical skills to students and provide continuous training to faculty for academic excellence. We aim to develop competent, responsible, and self-reliant professionals who contribute positively to society and nation-building.
+</p>
+
+</div>
+
+<div class="vision-box">
+
+<h2 data-en="Vision"
+    data-mr="दृष्टी">
+    Vision
+</h2>
+
+<p data-en="To be a center of excellence in technical and professional education by promoting sustainable human development and creating a self-reliant society."
+   data-mr="तांत्रिक व व्यावसायिक शिक्षण क्षेत्रात उत्कृष्टतेचे केंद्र बनून शाश्वत मानव विकासाला प्रोत्साहन देत आत्मनिर्भर समाज निर्माण करणे ही आमची दृष्टी आहे.">
+   To be a center of excellence in technical and professional education by promoting sustainable human development and creating a self-reliant society.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= ANTI RAGGING ================= -->
+
+<section class="ragging-strip">
+    <p data-en="🚫 Say No to Ragging – Ragging is strictly prohibited on campus and off campus. Join hands to make our campus ragging free."
+       data-mr="🚫 रॅगिंगला नाही म्हणा – कॅम्पसमध्ये व कॅम्पस बाहेर रॅगिंग पूर्णपणे बंदी आहे. आपला कॅम्पस रॅगिंगमुक्त करण्यासाठी सहकार्य करा.">
+       
+       🚫 Say No to Ragging – Ragging is strictly prohibited on campus and off campus. Join hands to make our campus ragging free.
+    
+    </p>
+</section>
+<!--Principal Meassage Section-->
+<!-- Floating Principal Button -->
+<div class="principal-float"
+     onclick="openModal()"
+     data-en="✍️ Principal’s Message"
+     data-mr="✍️ प्राचार्यांचा संदेश">
+     ✍️ Principal’s Message
+</div>
+
+<!-- Principal Modal -->
+<div id="principalModal" class="modal">
+    <div class="modal-content principal-layout">
+
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <div class="principal-photo">
+            <img src="images/principal.jpg" alt="Principal">
+        </div>
+
+        <div class="principal-text">
+
+            <h2 data-en="Principal’s Message"
+                data-mr="प्राचार्यांचा संदेश">
+                Principal’s Message
+            </h2>
+
+            <p data-en="At Suhas Institute of Technology, our mission is to nurture technically competent, innovative, and ethically responsible engineers. We focus on hands-on learning, industry exposure, and overall personality development to prepare our students for a bright future."
+               data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी येथे आमचे ध्येय तांत्रिकदृष्ट्या सक्षम, नवोन्मेषी व नैतिक जबाबदारी असलेले अभियंते घडवणे आहे. आम्ही प्रात्यक्षिक शिक्षण, उद्योगाशी संपर्क आणि व्यक्तिमत्त्व विकासावर भर देतो, ज्यामुळे विद्यार्थी उज्ज्वल भविष्यासाठी तयार होतात.">
+               
+               At Suhas Institute of Technology, our mission is to nurture technically competent, innovative, and ethically responsible engineers. We focus on hands-on learning, industry exposure, and overall personality development to prepare our students for a bright future.
+            </p>
+
+            <h4 data-en="— Principal, Suhas Institute of Technology"
+                data-mr="— प्राचार्य, सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी">
+                — Principal, Suhas Institute of Technology
+            </h4>
+
+        </div>
+
+    </div>
+</div>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-content">
+
+    <p>© 2026 Suhas Institute of Technology, Karsurdi. All Rights Reserved</p>
+
+   <!-- Social Icons -->
+<div class="social-icons">
+
+    <a href="https://www.instagram.com/suhas_insttitute" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com/YOUR_ID" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://youtube.com" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+</div>
+
+
+</footer>
+
+
+<script src="index.js"></script>
+
+<script src="lang.js"></script>
+
+</body>
+</html>
+
