@@ -1,26 +1,32 @@
 /* =====================================================
-   ACADEMIC PAGE STYLES - Page-specific only
-   Common styles (breadcrumb, footer, page-title, variables) in common.css
+   ACADEMIC PAGE STYLES - Enhanced Premium Theme
+   Professional College Theme: Navy Blue (#0A2540), White (#FFFFFF), Light Gold (#D4AF37)
    ===================================================== */
 
 /* ================= COURSES SECTION ================= */
 .courses-section {
-    padding: 60px 0;
-    background: var(--bg);
+    padding: 70px 0;
+    background: linear-gradient(135deg, #f4f6f9 0%, #eef2f7 100%);
 }
 
 .courses-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .table-wrapper {
     background: var(--white);
-    border-radius: 15px;
-    box-shadow: var(--shadow-md);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
     overflow: hidden;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(10, 37, 64, 0.08);
+    transition: box-shadow var(--transition-smooth);
+}
+
+.table-wrapper:hover {
+    box-shadow: var(--shadow-xl);
 }
 
 .courses-table {
@@ -29,47 +35,67 @@
 }
 
 .courses-table thead {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
 }
 
 .courses-table thead th {
-    padding: 18px 20px;
+    padding: 20px 25px;
     text-align: center;
     color: var(--white);
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border: none;
 }
 
 .courses-table thead th:first-child {
     text-align: center;
-    width: 80px;
+    width: 90px;
 }
 
 .courses-table tbody tr {
     transition: var(--transition);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(10, 37, 64, 0.06);
+    position: relative;
+}
+
+.courses-table tbody tr::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transition: transform var(--transition);
 }
 
 .courses-table tbody tr:nth-child(even) {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
 }
 
 .courses-table tbody tr:hover {
-    background: rgba(11, 44, 90, 0.05);
+    background: linear-gradient(135deg, rgba(10, 37, 64, 0.03) 0%, rgba(10, 37, 64, 0.06) 100%);
+}
+
+.courses-table tbody tr:hover::before {
+    transform: scaleY(1);
 }
 
 .courses-table tbody td {
-    padding: 16px 20px;
+    padding: 18px 25px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--text);
+    vertical-align: middle;
 }
 
 .courses-table tbody td:first-child {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary);
+    font-size: 16px;
 }
 
 .courses-table tbody tr:last-child {
@@ -78,57 +104,63 @@
 
 /* ================= NOTE BOX ================= */
 .note-box {
-    background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    padding: 20px 25px;
+    background: linear-gradient(135deg, #fffef8 0%, #fff9e6 100%);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    padding: 24px 28px;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    box-shadow: var(--shadow-sm);
+    gap: 14px;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.note-box:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .note-box h4 {
     color: var(--primary);
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .note-box h4 i {
     color: var(--accent);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .note-box p {
     color: var(--text-light);
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* ================= WHY CHOOSE SECTION ================= */
 .why-choose-section {
-    padding: 60px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
 .why-choose-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .why-choose-section h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--primary);
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 55px;
     font-weight: 700;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .why-choose-section h2::after {
@@ -137,71 +169,96 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 80px;
     height: 4px;
-    background: var(--accent);
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
     border-radius: 2px;
 }
 
 .why-choose-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .choose-card {
     background: var(--white);
-    border-radius: 15px;
-    padding: 35px 25px;
+    border-radius: 18px;
+    padding: 40px 30px;
     text-align: center;
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(10, 37, 64, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.choose-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    transform: scaleX(0);
+    transition: transform var(--transition);
 }
 
 .choose-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
     border-color: var(--accent);
 }
 
+.choose-card:hover::before {
+    transform: scaleX(1);
+}
+
 .choose-icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    transition: var(--transition);
+    margin: 0 auto 25px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-md);
 }
 
 .choose-card:hover .choose-icon {
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    box-shadow: var(--glow-gold);
+    transform: scale(1.05);
 }
 
 .choose-icon i {
-    font-size: 28px;
+    font-size: 32px;
     color: var(--white);
+    transition: color var(--transition);
+}
+
+.choose-card:hover .choose-icon i {
+    color: var(--primary);
 }
 
 .choose-card h3 {
     font-size: 18px;
     color: var(--primary);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-weight: 700;
+    line-height: 1.4;
 }
 
 .choose-card p {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-light);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Responsive handled by common.css */
-
-/* ================= ALIGNMENT + MOTION TUNING ================= */
+/* ================= PAGE TITLE ================= */
 .page-title-section {
     overflow: hidden;
 }
@@ -216,22 +273,93 @@
     margin-bottom: 10px;
 }
 
-.courses-table th,
-.courses-table td {
-    vertical-align: middle;
+/* ================= RESPONSIVE STYLES ================= */
+@media (max-width: 992px) {
+    .courses-section {
+        padding: 50px 0;
+    }
+    
+    .why-choose-section {
+        padding: 60px 0;
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 }
 
-.choose-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 280px;
+@media (max-width: 768px) {
+    .courses-container {
+        padding: 0 15px;
+    }
+    
+    .table-wrapper {
+        border-radius: 12px;
+        overflow-x: auto;
+    }
+    
+    .courses-table {
+        min-width: 600px;
+    }
+    
+    .courses-table thead th,
+    .courses-table tbody td {
+        padding: 14px 16px;
+    }
+    
+    .note-box {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .why-choose-section h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .choose-card {
+        padding: 30px 22px;
+    }
+    
+    .choose-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .choose-icon i {
+        font-size: 28px;
+    }
 }
 
-.choose-card p {
-    margin-top: auto;
+@media (max-width: 576px) {
+    .courses-section {
+        padding: 40px 0;
+    }
+    
+    .why-choose-section {
+        padding: 50px 0;
+    }
+    
+    .why-choose-section h2 {
+        font-size: 24px;
+    }
+    
+    .note-box h4 {
+        font-size: 15px;
+    }
+    
+    .note-box p {
+        font-size: 13px;
+    }
 }
 
+/* ================= ANIMATION ENHANCEMENTS ================= */
 @media (prefers-reduced-motion: no-preference) {
     .page-title-container h1 {
         animation: heroFloat 3.2s ease-in-out infinite alternate;
@@ -244,12 +372,26 @@
 
 @keyframes heroFloat {
     from { transform: translateY(0); }
-    to { transform: translateY(-3px); }
+    to { transform: translateY(-4px); }
 }
 
 @keyframes iconPulse {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+    50% { transform: scale(1.05); }
+}
+
+/* Smooth scroll-based fade-in for sections */
+.courses-section,
+.why-choose-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.courses-section.visible,
+.why-choose-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* If AOS library is unavailable, keep content visible */

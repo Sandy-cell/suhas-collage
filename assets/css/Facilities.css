@@ -1,21 +1,79 @@
-﻿/* ================= FACILITIES ================= */
+﻿/* =====================================================
+   FACILITIES CSS - Enhanced Premium Theme
+   Suhas Institute of Technology
+   Professional College Theme: Navy Blue (#0A2540), White (#FFFFFF), Light Gold (#D4AF37)
+   ===================================================== */
+
+/* ================= CSS VARIABLES - Updated Premium Theme ================= */
+:root {
+    /* Primary Colors - Navy Blue Theme */
+    --primary: #0A2540;
+    --primary-dark: #061829;
+    --primary-light: #143a5e;
+    --primary-medium: #0d3251;
+    
+    /* Accent Colors - Light Gold */
+    --accent: #D4AF37;
+    --accent-light: #e5c565;
+    --accent-dark: #b8962e;
+    
+    /* Additional Colors */
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #f4f6f9;
+    --white: #ffffff;
+    
+    /* Shadows - Enhanced for depth */
+    --shadow-xs: 0 1px 3px rgba(10, 37, 64, 0.08);
+    --shadow-sm: 0 2px 8px rgba(10, 37, 64, 0.1);
+    --shadow-md: 0 8px 25px rgba(10, 37, 64, 0.12);
+    --shadow-lg: 0 15px 40px rgba(10, 37, 64, 0.15);
+    --shadow-xl: 0 20px 50px rgba(10, 37, 64, 0.18);
+    
+    /* Gold glow effect */
+    --glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+    
+    /* Transitions - Smooth 0.3s-0.5s */
+    --transition-fast: all 0.2s ease;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= BANNER ================= */
 .banner {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    padding: 38px 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+    padding: 50px 25px;
     text-align: center;
+    border-bottom: 4px solid var(--accent);
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.12) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .banner h1 {
     margin: 0;
     color: var(--white);
-    font-size: clamp(26px, 4vw, 36px);
+    font-size: clamp(28px, 4vw, 40px);
     font-weight: 700;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1;
 }
 
+/* ================= FACILITIES SECTION ================= */
 .facilities-scroll {
-    padding: 50px 20px;
-    background: #f1f3f6;
+    padding: 70px 25px;
+    background: linear-gradient(135deg, #f4f6f9 0%, #eef2f7 100%);
 }
 
 .facilities-container {
@@ -25,74 +83,119 @@
 
 .facilities-header {
     max-width: 840px;
-    margin: 0 auto 24px;
+    margin: 0 auto 40px;
     text-align: center;
 }
 
 .facilities-scroll h2 {
-    font-size: 26px;
+    font-size: clamp(24px, 3vw, 32px);
     color: var(--primary);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.facilities-scroll h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    border-radius: 2px;
 }
 
 .facilities-header p {
     color: var(--text-light);
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.facilities-grid {
+/* ================= HIGHLIGHT CHIPS ================= */
+.facilities-highlights {
     max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.facility-highlights {
-    max-width: 1100px;
-    margin: 0 auto 22px;
+    margin: 0 auto 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .highlight-chip {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: var(--white);
-    border: 1px solid #dfe5ee;
+    gap: 10px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+    border: 1px solid rgba(10, 37, 64, 0.1);
     border-radius: 999px;
-    padding: 8px 14px;
+    padding: 10px 18px;
     color: var(--primary);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.highlight-chip:hover {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--glow-gold);
+    border-color: var(--accent);
 }
 
 .highlight-chip i {
     color: var(--accent);
-    font-size: 13px;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.highlight-chip:hover i {
+    color: var(--primary);
+}
+
+/* ================= FACILITIES GRID ================= */
+.facilities-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
 }
 
 .facility-card {
     background: var(--white);
-    border: 1px solid #e6eaf0;
-    border-radius: 12px;
-    padding: 18px 16px;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
-    min-height: 250px;
+    border: 1px solid rgba(10, 37, 64, 0.08);
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+    min-height: 280px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    transform: scaleX(0);
+    transition: transform var(--transition);
 }
 
 .facility-card.facility-animate {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
 }
 
 .facility-card.facility-animate.is-visible {
@@ -101,71 +204,213 @@
 }
 
 .facility-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent);
+}
+
+.facility-card:hover::before {
+    transform: scaleX(1);
 }
 
 .facility-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid rgba(11, 44, 90, 0.14);
-    background: #f8fbff;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+.facility-card:hover .facility-icon {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    box-shadow: var(--glow-gold);
+    transform: scale(1.05);
 }
 
 .facility-icon i {
-    color: var(--primary);
-    font-size: 20px;
+    color: var(--accent);
+    font-size: 24px;
     line-height: 1;
+    transition: var(--transition);
+}
+
+.facility-card:hover .facility-icon i {
+    color: var(--primary);
 }
 
 .facility-card h3 {
-    margin: 0 0 6px;
+    margin: 0 0 10px;
     color: var(--primary);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
+    line-height: 1.4;
 }
 
 .facility-card p {
     margin: 0;
     color: var(--text-light);
-    font-size: 14px;
-    line-height: 1.55;
-    margin-top: 2px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: auto;
 }
 
+/* ================= FOOTER ================= */
+footer {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: var(--white);
+    padding: 35px 25px;
+    text-align: center;
+    border-top: 3px solid var(--accent);
+}
 
+.footer-content p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.dev-popup {
+    font-size: 12px !important;
+    opacity: 0.7 !important;
+    margin-bottom: 15px !important;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: var(--glow-gold);
+}
+
+/* ================= ANIMATIONS ================= */
+@media (prefers-reduced-motion: no-preference) {
+    .banner h1 {
+        animation: bannerFloat 3s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes bannerFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
     .facilities-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+    
+    .facility-card {
+        min-height: 260px;
+        padding: 24px 20px;
     }
 }
 
 @media (max-width: 768px) {
     .facilities-scroll {
-        padding: 32px 15px;
+        padding: 50px 20px;
     }
 
     .facilities-header {
-        margin-bottom: 16px;
+        margin-bottom: 30px;
     }
 
     .facilities-scroll h2 {
-        font-size: 22px;
-        margin-bottom: 18px;
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding-bottom: 14px;
     }
 
     .facilities-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 20px;
     }
 
     .facility-card {
         min-height: auto;
+        padding: 24px 20px;
+        border-radius: 14px;
+    }
+    
+    .facility-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 16px;
+    }
+    
+    .facility-icon i {
+        font-size: 22px;
+    }
+    
+    .facility-card h3 {
+        font-size: 17px;
+    }
+    
+    .facility-card p {
+        font-size: 14px;
+    }
+    
+    .banner {
+        padding: 40px 20px;
+    }
+    
+    .banner h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner h1 {
+        font-size: 24px;
+    }
+    
+    .facilities-scroll {
+        padding: 40px 15px;
+    }
+    
+    .highlight-chip {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+    
+    .facilities-scroll h2 {
+        font-size: 22px;
+    }
+    
+    .facilities-header p {
+        font-size: 14px;
     }
 }
 
@@ -175,5 +420,8 @@
         opacity: 1 !important;
         transform: none !important;
     }
+    
+    .banner h1 {
+        animation: none;
+    }
 }
-

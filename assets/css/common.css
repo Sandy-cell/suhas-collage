@@ -1,19 +1,42 @@
 /* ================= COMMON CSS VARIABLES ================= */
+/* Professional College Theme: Navy Blue (#0A2540), White (#FFFFFF), Light Gold Accent (#D4AF37) */
 :root {
-    --primary: #0b2c5a;
-    --primary-dark: #082040;
-    --primary-light: #1a3d6e;
-    --accent: #f4b400;
-    --accent-light: #ffc107;
+    /* Primary Colors - Navy Blue Theme */
+    --primary: #0A2540;
+    --primary-dark: #061829;
+    --primary-light: #143a5e;
+    --primary-medium: #0d3251;
+    
+    /* Accent Colors - Light Gold */
+    --accent: #D4AF37;
+    --accent-light: #e5c565;
+    --accent-dark: #b8962e;
+    
+    /* Additional Colors */
     --blue: #0077ff;
-    --text: #333;
-    --text-light: #666;
+    --blue-light: #3395ff;
+    --text: #333333;
+    --text-light: #666666;
+    --text-muted: #888888;
     --bg: #f4f6f9;
+    --bg-light: #f8fafc;
     --white: #ffffff;
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-    --shadow-md: 0 8px 25px rgba(0,0,0,0.12);
-    --shadow-lg: 0 15px 40px rgba(0,0,0,0.15);
+    
+    /* Shadows - Enhanced for depth */
+    --shadow-xs: 0 1px 3px rgba(10, 37, 64, 0.08);
+    --shadow-sm: 0 2px 8px rgba(10, 37, 64, 0.1);
+    --shadow-md: 0 8px 25px rgba(10, 37, 64, 0.12);
+    --shadow-lg: 0 15px 40px rgba(10, 37, 64, 0.15);
+    --shadow-xl: 0 20px 50px rgba(10, 37, 64, 0.18);
+    
+    /* Gold glow effect */
+    --glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+    
+    /* Transitions - Smooth 0.3s-0.5s */
+    --transition-fast: all 0.2s ease;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ================= GLOBAL RESET ================= */
@@ -69,7 +92,7 @@ ul {
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -79,23 +102,23 @@ ul {
 }
 
 .btn-primary {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
     color: var(--primary);
 }
 
 .btn-primary:hover {
-    background: var(--accent-light);
+    background: linear-gradient(135deg, var(--accent-light), #f0d78a);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md), var(--glow-gold);
 }
 
 .btn-secondary {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: var(--white);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-light);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -103,15 +126,17 @@ ul {
 /* ================= CARD STYLES ================= */
 .card {
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    transition: var(--transition);
+    transition: var(--transition-smooth);
+    border: 1px solid transparent;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
 }
 
 /* ================= BREADCRUMB ================= */
@@ -205,10 +230,11 @@ ul {
 
 /* ================= FOOTER ================= */
 footer {
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     color: var(--white);
     padding: 30px 20px;
     text-align: center;
+    border-top: 3px solid var(--accent);
 }
 
 footer p {
@@ -242,15 +268,19 @@ footer p {
 }
 
 footer .developer-credit .developer-trigger {
-    background: linear-gradient(135deg, #ffd166, #ffb703);
-    border-color: #ffb703;
-    color: #2b1a00;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    border-color: var(--accent);
+    color: var(--primary);
+    font-weight: 700;
+    transition: var(--transition);
 }
 
 footer .developer-credit .developer-trigger:hover,
 footer .developer-credit .developer-trigger:focus-visible {
-    background: linear-gradient(135deg, #ffe08a, #ffc933);
-    color: #1f1400;
+    background: linear-gradient(135deg, var(--accent-light), #f0d78a);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--glow-gold);
 }
 
 .dev-popup {
@@ -267,21 +297,24 @@ footer .developer-credit .developer-trigger:focus-visible {
 }
 
 .social-icons a {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    transition: var(--transition);
+    transition: var(--transition-smooth);
+    border: 1px solid transparent;
 }
 
 .social-icons a:hover {
     background: var(--accent);
     color: var(--primary);
     transform: translateY(-3px);
+    box-shadow: var(--glow-gold);
+    border-color: var(--accent);
 }
 
 /* ================= RESPONSIVE ================= */
