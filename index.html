@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhas Institute of Technology</title>
+    <meta name="description" content="Suhas Institute of Technology - Premier Engineering Diploma College in Pune, Maharashtra">
+    
+    <!-- 1. FONTS - Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 2. ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- 3. BOOTSTRAP 5 (layout/grid only - NO JS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- 4. LIBRARY CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" integrity="sha512-7hMZ/h5aPGA8XqK3qçƒ­æ°”RVCqVcn7F3Kq3bjXhQkfYbOS0vY0Qv7R0i+k1gP2yW6tFrSO4yWq5Q7gKkHN6qO4Q==" crossorigin="anonymous" referrerpolicy="no-referrer-when-downgrade">
+    
+    <!-- 5. CUSTOM CSS (HIGHEST PRIORITY) -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/benefits.css">
+    <link rel="stylesheet" href="assets/css/scroll-sections.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+</head>
+<body>
+<!-- HEADER -->
+<header data-aos="fade-down">
+    <div class="topbar">
+        <div class="topbar-left"></div>
+        <div class="topbar-center">
+            <img src="image/logo.png" alt="Suhas Institute Logo" class="topbar-logo" loading="eager" width="70" height="auto">
+        </div>
+        <div class="topbar-right"></div>
+    </div>
+    <div class="college-name">
+        <p data-en="Nanasaheb Thombre Education Trust" data-mr="नानासाहेब ठोंबरे एज्युकेशन ट्रस्ट">Nanasaheb Thombre Education Trust</p>
+        <h1 data-en="Suhas Institute of Technology" data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी">Suhas Institute of Technology</h1>
+        <h2 data-en="(Engineering Polytechnic College)" data-mr="(अभियांत्रिकी पॉलिटेक्निक महाविद्यालय)">(Engineering Diploma College)</h2>
+        <p data-en="Accredited by Maharashtra Government | AICTE | DTE | Affiliated to MSBTE" data-mr="महाराष्ट्र शासन मान्यताप्राप्त | AICTE | DTE | MSBTE संलग्न">Accredited by Maharashtra Government | AICTE | DTE | Affiliated to MSBTE</p>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar-main">
+    <div class="nav-main-container">
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link" data-en="Home" data-mr="मुख्यपृष्ठ">Home</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-dropdown="about"><span data-en="About Us" data-mr="आमच्याबद्दल">About Us</span> <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="about/about-college.html"><i class="fas fa-university"></i> <span data-en="About College" data-mr="महाविद्यालयाबद्दल">About College</span></a></li>
+                    <li><a href="about/vision-mission.html"><i class="fas fa-eye"></i> <span data-en="Vision & Mission" data-mr="दृष्टिकोन व ध्येय">Vision & Mission</span></a></li>
+                    <li><a href="about/principal-desk.html"><i class="fas fa-user-tie"></i> <span data-en="Principal Desk" data-mr="प्राचार्य कक्ष">Principal Desk</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="academic/academic.html" class="nav-link" data-en="Academics" data-mr="शैक्षणिक">Academics</a></li>
+            <li class="nav-item"><a href="course/course.html" class="nav-link" data-en="Courses" data-mr="अभ्यासक्रम">Courses</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-dropdown="departments"><span data-en="Departments" data-mr="विभाग">Departments</span> <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="department/first-year/first-year.html"><i class="fas fa-graduation-cap"></i> <span data-en="First Year" data-mr="प्रथम वर्ष">First Year</span></a></li>
+                    <li><a href="department/computer/computer.html"><i class="fas fa-laptop"></i> <span data-en="Computer" data-mr="संगणक">Computer</span></a></li>
+                    <li><a href="department/mechanical/mechanical.html"><i class="fas fa-cogs"></i> <span data-en="Mechanical" data-mr="यांत्रिक">Mechanical</span></a></li>
+                    <li><a href="department/electrical/electrical.html"><i class="fas fa-bolt"></i> <span data-en="Electrical" data-mr="विद्युत">Electrical</span></a></li>
+                    <li><a href="index.html"><i class="fas fa-building"></i> <span data-en="Civil" data-mr="स्थापत्य">Civil</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item has-dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-dropdown="campus"><span data-en="Campus Life" data-mr="कॅम्पस जीवन">Campus Life</span> <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="campus-life/student-activities.html"><i class="fas fa-images"></i> <span data-en="Student Activities" data-mr="विद्यार्थी उपक्रम">Student Activities</span></a></li>
+                    <li><a href="campus-life/events.html"><i class="fas fa-calendar-alt"></i> <span data-en="Events" data-mr="कार्यक्रम">Events</span></a></li>
+                    <li><a href="campus-life/industrial-visit.html"><i class="fas fa-industry"></i> <span data-en="Industrial Visit" data-mr="औद्योगिक भेट">Industrial Visit</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="Facilities/facilities.html" class="nav-link" data-en="Facilities" data-mr="सुविधा">Facilities</a></li>
+            <li class="nav-item"><a href="staff/staff.html" class="nav-link" data-en="Staff" data-mr="कर्मचारी">Staff</a></li>
+        </ul>
+        <div class="nav-lang" id="langToggle">
+            <span class="lang-btn" id="langTextEn">EN</span>
+            <label class="lang-switch">
+                <input type="checkbox" id="languageToggle">
+                <span class="lang-slider"></span>
+            </label>
+            <span class="lang-btn" id="langTextMr">मराठी</span>
+        </div>
+    </div>
+</nav>
+<!-- Mobile Overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="main-content">
+    <div class="container">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-left">
+                <div class="swiper mySwiper slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="image/collage.png" alt="College Campus" loading="lazy" width="500" height="350"></div>
+                        <div class="swiper-slide"><img src="image/viwe.webp" alt="Students in Classroom" loading="lazy" width="500" height="350"></div>
+                        <div class="swiper-slide"><img src="image/principal-office.png" alt="Principal Office" loading="lazy" width="500" height="350"></div>
+                    </div>
+                    <div class="swiper-button-next" aria-label="Next slide"></div>
+                    <div class="swiper-button-prev" aria-label="Previous slide"></div>
+                </div>
+            </div>
+            <div class="about-content" data-aos="fade-right">
+                <h2 data-en="About Us" data-mr="आमच्याबद्दल">About Us</h2>
+                <p data-en="Suhas Institute of Technology, Kasurdi is approved by AICTE & DTE Maharashtra and affiliated to MSBTE, offering quality diploma engineering education with a student-centric and practice-oriented approach." data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी, कासुर्डी हे AICTE व DTE महाराष्ट्र मान्यताप्राप्त असून MSBTE संलग्न आहे. विद्यार्थी-केंद्रित आणि प्रात्यक्षिकाभिमुख दृष्टिकोनातून दर्जेदार डिप्लोमा अभियांत्रिकी शिक्षण येथे दिले जाते.">Suhas Institute of Technology, Kasurdi is approved by AICTE & DTE Maharashtra and affiliated to MSBTE, offering quality diploma engineering education with a student-centric and practice-oriented approach.</p>
+                <p data-en="We focus on overall student development, including academics, practical skills, discipline, teamwork, and leadership. Our modern labs, skilled faculty, and industry-relevant curriculum prepare students for higher education, industry, and entrepreneurship." data-mr="आमचा भर विद्यार्थ्यांच्या सर्वांगीण विकासावर आहे, ज्यात शैक्षणिक गुणवत्ता, प्रात्यक्षिक कौशल्ये, शिस्त, संघभावना आणि नेतृत्व यांचा समावेश आहे. आमच्या आधुनिक प्रयोगशाळा, अनुभवी प्राध्यापक आणि उद्योगाभिमुख अभ्यासक्रम विद्यार्थ्यांना उच्च शिक्षण, उद्योगक्षेत्र आणि उद्योजकतेसाठी सक्षम करतात.">We focus on overall student development, including academics, practical skills, discipline, teamwork, and leadership. Our modern labs, skilled faculty, and industry-relevant curriculum prepare students for higher education, industry, and entrepreneurship.</p>
+                <p data-en="Located in a safe and eco-friendly campus at Kasurdi, Tal. Daund, Dist. Pune, we provide a supportive and motivating learning environment." data-mr="कासुर्डी, ता. दौंड, जि. पुणे येथील सुरक्षित आणि पर्यावरणपूरक कॅम्पसमध्ये आम्ही सहाय्यकारी व प्रेरणादायी शिक्षण वातावरण उपलब्ध करून देतो.">Located in a safe and eco-friendly campus at Kasurdi, Tal. Daund, Dist. Pune, we provide a supportive and motivating learning environment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section class="dept-section">
+    <h2 class="section-title" data-aos="fade-up" data-en="Departments" data-mr="विभाग">Departments</h2>
+    <p class="dept-subtitle" data-aos="fade-up" data-en="Each department is equipped with modern infrastructure." data-mr="प्रत्येक विभाग आधुनिक पायाभूत सुविधांनी सुसज्ज आहे.">Each department is equipped with modern infrastructure.</p>
+    <div class="dept-container">
+        <a href="department/computer/computer.html" class="dept-card" data-aos="fade-up" data-aos-delay="100"><h3 data-en="Computer Engineering" data-mr="संगणक अभियांत्रिकी">Computer Engineering</h3></a>
+        <a href="department/mechanical/mechanical.html" class="dept-card" data-aos="fade-up" data-aos-delay="200"><h3 data-en="Mechanical Engineering" data-mr="यांत्रिक अभियांत्रिकी">Mechanical Engineering</h3></a>
+        <a href="department/electrical/electrical.html" class="dept-card" data-aos="fade-up" data-aos-delay="300"><h3 data-en="Electrical Engineering" data-mr="विद्युत अभियांत्रिकी">Electrical Engineering</h3></a>
+        <a href="index.html" class="dept-card" data-aos="fade-up" data-aos-delay="400"><h3 data-en="Civil Engineering" data-mr="स्थापत्य अभियांत्रिकी">Civil Engineering</h3></a>
+    </div>
+</section>
+
+<!-- ADMISSION -->
+<section class="admission-section" data-aos="fade-in">
+    <div class="admission-container">
+        <h2 data-en="Admissions Open" data-mr="प्रवेश प्रक्रिया सुरू">Admissions Open</h2>
+        <p data-en="Suhas Institute invites applications for Diploma Engineering programs." data-mr="सुहास इन्स्टिट्यूट डिप्लोमा अभियांत्रिकी अभ्यासक्रमांसाठी अर्ज आमंत्रित करते.">Suhas Institute invites applications for Diploma Engineering programs.</p>
+        <p data-en="Eligible candidates can apply through CAP conducted by DTE Maharashtra." data-mr="पात्र उमेदवार DTE महाराष्ट्र आयोजित CAP प्रक्रियेद्वारे अर्ज करू शकतात.">Eligible candidates can apply through CAP conducted by DTE Maharashtra.</p>
+        <div class="admission-buttons">
+            <a href="admission.html" class="admission-btn" data-en="Apply Now" data-mr="आता अर्ज करा">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+    <div class="benefits-header"><h2 data-en="Our Benefits" data-mr="आमच्या सुविधा">Our Benefits</h2></div>
+    <div class="benefits-row">
+        <button class="benefit-card" data-benefit="education"><span class="benefit-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span><span class="benefit-name" data-en="Free Education Support" data-mr="मोफत शिक्षण सहाय्य">Free Education Support</span><span class="benefit-desc" data-en="SC, NT, ST, NBC students eligible." data-mr="SC, NT, ST, NBC विद्यार्थी पात्र.">SC, NT, ST, NBC students eligible.</span></button>
+        <button class="benefit-card" data-benefit="fee"><span class="benefit-icon" aria-hidden="true"><i class="fas fa-hand-holding-dollar"></i></span><span class="benefit-name" data-en="Fee Concession" data-mr="शुल्क सवलत">Fee Concession</span><span class="benefit-desc" data-en="OBC & Open - up to 50%." data-mr="OBC व Open - 50% पर्यंत.">OBC & Open - up to 50%.</span></button>
+        <button class="benefit-card" data-benefit="loan"><span class="benefit-icon" aria-hidden="true"><i class="fas fa-landmark"></i></span><span class="benefit-name" data-en="Loan Facilities" data-mr="कर्ज सुविधा">Loan Facilities</span><span class="benefit-desc" data-en="Education loan support available." data-mr="शैक्षणिक कर्जासाठी सहाय्य उपलब्ध.">Education loan support available.</span></button>
+        <button class="benefit-card" data-benefit="playground"><span class="benefit-icon" aria-hidden="true"><i class="fas fa-futbol"></i></span><span class="benefit-name" data-en="Playground & Activities" data-mr="खेळाचे मैदान व उपक्रम">Playground & Activities</span><span class="benefit-desc" data-en="Sports facilities available." data-mr="क्रीडा सुविधा उपलब्ध.">Sports facilities available.</span></button>
+    </div>
+</section>
+
+<!-- FACILITIES + NOTICE BOARD -->
+<section class="scroll-sections" aria-label="Facilities and Notice Board">
+    <div class="scroll-sections-grid">
+        <article class="scroll-container">
+            <header class="scroll-container-header">
+                <h2><span class="section-head-icon"><i class="fas fa-building" aria-hidden="true"></i></span><span data-en="Facilities" data-mr="सुविधा">Facilities</span></h2>
+            </header>
+            <div class="scroll-viewport" data-scroll-speed="0.17">
+                <div class="scroll-track" role="list">
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Spacious Classrooms" data-mr="प्रशस्त वर्गखोली">Spacious Classrooms</h3>
+                            <p data-en="Well-ventilated smart classrooms for focused daily learning." data-mr="एकाग्र दैनंदिन शिक्षणासाठी हवेशीर आणि स्मार्ट वर्गखोली.">Well-ventilated smart classrooms for focused daily learning.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">INFRA</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-flask" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Modern Laboratories" data-mr="आधुनिक प्रयोगशाळा">Modern Laboratories</h3>
+                            <p data-en="Department labs with practical tools and updated equipment." data-mr="प्रात्यक्षिक साधने आणि अद्ययावत उपकरणांसह विभागीय प्रयोगशाळा.">Department labs with practical tools and updated equipment.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">LAB</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-desktop" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Computer Center" data-mr="संगणक केंद्र">Computer Center</h3>
+                            <p data-en="Dedicated computer center with systems for all core subjects." data-mr="सर्व मुख्य विषयांसाठी प्रणालींसह स्वतंत्र संगणक केंद्र.">Dedicated computer center with systems for all core subjects.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">DIGITAL</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Library" data-mr="ग्रंथालय">Library</h3>
+                            <p data-en="Reference books, journals, and study resources for students." data-mr="विद्यार्थ्यांसाठी संदर्भ पुस्तके, जर्नल्स आणि अभ्यास साहित्य.">Reference books, journals, and study resources for students.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">ACADEMIC</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-wifi" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Internet & Wi-Fi" data-mr="इंटरनेट व वाय-फाय">Internet & Wi-Fi</h3>
+                            <p data-en="Campus-wide internet access to support project and research work." data-mr="प्रकल्प आणि संशोधन कार्यासाठी संपूर्ण कॅम्पसमध्ये इंटरनेट सुविधा.">Campus-wide internet access to support project and research work.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">CONNECTIVITY</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-tools" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Workshop" data-mr="वर्कशॉप">Workshop</h3>
+                            <p data-en="Hands-on workshop practice to build strong technical fundamentals." data-mr="मजबूत तांत्रिक पायाभूत ज्ञानासाठी प्रत्यक्ष वर्कशॉप सराव.">Hands-on workshop practice to build strong technical fundamentals.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">PRACTICAL</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-running" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Playground" data-mr="खेळाचे मैदान">Playground</h3>
+                            <p data-en="Open sports area for physical activities and team events." data-mr="शारीरिक उपक्रम आणि संघ स्पर्धांसाठी खुले क्रीडांगण.">Open sports area for physical activities and team events.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">SPORTS</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-video" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="CCTV Security" data-mr="CCTV सुरक्षा">CCTV Security</h3>
+                            <p data-en="Monitored campus environment to maintain safety and discipline." data-mr="सुरक्षा व शिस्त राखण्यासाठी देखरेखीखालील कॅम्पस वातावरण.">Monitored campus environment to maintain safety and discipline.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">SAFETY</span></div>
+                        </div>
+                    </div>
+                    <div class="scroll-item" role="listitem">
+                        <span class="scroll-item-icon"><i class="fas fa-parking" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Parking" data-mr="वाहनतळ">Parking</h3>
+                            <p data-en="Organized parking space for students, staff, and visitors." data-mr="विद्यार्थी, कर्मचारी आणि अभ्यागतांसाठी सुव्यवस्थित पार्किंग जागा.">Organized parking space for students, staff, and visitors.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">ACCESS</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="scroll-container">
+            <header class="scroll-container-header">
+                <h2><span class="section-head-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></span><span data-en="Notice Board" data-mr="सूचना फलक">Notice Board</span></h2>
+            </header>
+            <div class="scroll-viewport" data-scroll-speed="0.17">
+                <div class="scroll-track" role="list">
+                    <a href="notices/admission.pdf" target="_blank" rel="noopener noreferrer" class="scroll-item notice-item" role="listitem" aria-label="Admission Open 2026-27 - Opens in new tab">
+                        <span class="scroll-item-icon"><i class="fas fa-file-circle-check" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3><span data-en="Admission Open 2026-27" data-mr="प्रवेश सुरू 2026-27">Admission Open 2026-27</span> <span class="notice-badge" data-en="New" data-mr="नवीन">New</span></h3>
+                            <p data-en="Applications are open for Diploma Engineering admissions." data-mr="डिप्लोमा अभियांत्रिकी प्रवेशासाठी अर्ज सुरू आहेत.">Applications are open for Diploma Engineering admissions.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">15 Feb 2026</span><span class="scroll-chip" data-en="Admission" data-mr="प्रवेश">Admission</span></div>
+                        </div>
+                    </a>
+                    <a href="notices/exam.pdf" target="_blank" rel="noopener noreferrer" class="scroll-item notice-item" role="listitem" aria-label="Exam Schedule - Opens in new tab">
+                        <span class="scroll-item-icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3><span data-en="Exam Schedule" data-mr="परीक्षा वेळापत्रक">Exam Schedule</span> <span class="notice-badge" data-en="Important" data-mr="महत्त्वाचे">Important</span></h3>
+                            <p data-en="Semester exam schedule has been published for all departments." data-mr="सर्व विभागांसाठी सेमेस्टर परीक्षा वेळापत्रक जाहीर झाले आहे.">Semester exam schedule has been published for all departments.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">10 Feb 2026</span><span class="scroll-chip" data-en="Exam" data-mr="परीक्षा">Exam</span></div>
+                        </div>
+                    </a>
+                    <a href="notices/timetable.pdf" target="_blank" rel="noopener noreferrer" class="scroll-item notice-item" role="listitem" aria-label="Class Timetable Update - Opens in new tab">
+                        <span class="scroll-item-icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Class Timetable Update" data-mr="वर्ग वेळापत्रक अद्ययावत">Class Timetable Update</h3>
+                            <p data-en="Revised class timetable is available for first and second shifts." data-mr="प्रथम व द्वितीय पाळीसाठी सुधारित वर्ग वेळापत्रक उपलब्ध आहे.">Revised class timetable is available for first and second shifts.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">03 Feb 2026</span><span class="scroll-chip" data-en="Timetable" data-mr="वेळापत्रक">Timetable</span></div>
+                        </div>
+                    </a>
+                    <a href="notices/scholarship.pdf" target="_blank" rel="noopener noreferrer" class="scroll-item notice-item" role="listitem" aria-label="Scholarship Helpdesk Notice - Opens in new tab">
+                        <span class="scroll-item-icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+                        <div class="scroll-item-body">
+                            <h3 data-en="Scholarship Helpdesk Notice" data-mr="शिष्यवृत्ती हेल्पडेस्क सूचना">Scholarship Helpdesk Notice</h3>
+                            <p data-en="Support desk timings and required documents for scholarship forms." data-mr="शिष्यवृत्ती फॉर्मसाठी हेल्पडेस्क वेळा आणि आवश्यक कागदपत्रांची माहिती.">Support desk timings and required documents for scholarship forms.</p>
+                            <div class="scroll-meta"><span class="scroll-chip">28 Jan 2026</span><span class="scroll-chip" data-en="Scholarship" data-mr="शिष्यवृत्ती">Scholarship</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- CONTACT DETAILS -->
+<section class="contact-snapshot" aria-label="Contact Details">
+    <div class="container">
+        <h2 class="section-title contact-title">
+            <span class="contact-title-logo" aria-hidden="true"><i class="fas fa-address-book"></i></span>
+            <span data-en="Contact Details" data-mr="संपर्क तपशील">Contact Details</span>
+        </h2>
+        <div class="contact-grid">
+            <article class="contact-card">
+                <h3><i class="fas fa-user-tie" aria-hidden="true"></i> <span data-en="Principal / Office" data-mr="प्राचार्य / कार्यालय">Principal / Office</span></h3>
+                <p class="contact-line"><span class="contact-label" data-en="Mobile" data-mr="मोबाईल">Mobile</span><a class="contact-phone" href="tel:+919975249309">9975249309</a></p>
+                <p><span data-en="Email:" data-mr="ईमेल:">Email:</span> <a href="mailto:1723principal@msbte.com">1723principal@msbte.com</a></p>
+            </article>
+
+            <article class="contact-card">
+                <h3><i class="fas fa-users" aria-hidden="true"></i> <span data-en="Staff Contact Numbers" data-mr="कर्मचारी संपर्क क्रमांक">Staff Contact Numbers</span></h3>
+                <p class="contact-line"><span class="contact-label" data-en="Suryavanshi Sir" data-mr="सूर्यवंशी सर">Suryavanshi Sir</span><a class="contact-phone" href="tel:+919404382629">9404382629</a></p>
+                <p class="contact-line"><span class="contact-label" data-en="Handal Sir" data-mr="हांडाळ सर">Handal Sir</span><a class="contact-phone" href="tel:+918007306016">8007306016</a></p>
+                <p class="contact-line"><span class="contact-label" data-en="Mulik Sir" data-mr="मुळीक सर">Mulik Sir</span><a class="contact-phone" href="tel:+919763303151">9763303151</a></p>
+            </article>
+
+            <article class="contact-card">
+                <h3><i class="fas fa-id-badge" aria-hidden="true"></i> <span data-en="Trustee Contact" data-mr="विश्वस्त संपर्क">Trustee Contact</span></h3>
+                <p class="contact-line"><span class="contact-label" data-en="Sumit Thombre Sir" data-mr="सुमित ठोंबरे सर">Sumit Thombre Sir</span><a class="contact-phone" href="tel:+919762040713">9762040713</a></p>
+            </article>
+        </div>
+        <article class="contact-card address-strip">
+            <h3><i class="fas fa-location-dot" aria-hidden="true"></i> <span data-en="Address / Location" data-mr="पत्ता / ठिकाण">Address / Location</span></h3>
+            <p data-en="GAT No. 254, Javjibuvachiwadi, Post: Kasurdi, Taluka: Daund, District: Pune, State: Maharashtra - 412214, Country: India" data-mr="गट क्र. 254, जावजीबुवाचीवाडी, पोस्ट: कासुर्डी, ता. दौंड, जि. पुणे, राज्य: महाराष्ट्र - 412214, देश: भारत">GAT No. 254, Javjibuvachiwadi, Post: Kasurdi, Taluka: Daund, District: Pune, State: Maharashtra - 412214, Country: India</p>
+            <p class="map-link-row">
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=GAT+No.+254,+Javjibuvachiwadi,+Kasurdi,+Daund,+Pune,+Maharashtra+412214" target="_blank" rel="noopener noreferrer">
+                    <span class="map-link-icon" aria-hidden="true"><i class="fas fa-map-location-dot"></i></span>
+                    <span data-en="Open in Google Maps" data-mr="Google Maps मध्ये उघडा">Open in Google Maps</span>
+                </a>
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- QUICK LINKS -->
+<div class="quick-links-scroll" role="navigation" aria-label="Quick Links">
+    <a href="https://www.aicte.gov.in/" target="_blank" rel="noopener noreferrer" class="quick-item" data-aos="fade-in" data-aos-delay="100" aria-label="AICTE - Opens in new tab"><div class="quick-circle"><img src="image/aicte-logo.png" alt="AICTE" loading="lazy" width="50" height="50"></div><div class="quick-name">AICTE</div></a>
+    <a href="https://msbte.ac.in/" target="_blank" rel="noopener noreferrer" class="quick-item" data-aos="fade-in" data-aos-delay="200" aria-label="MSBTE - Opens in new tab"><div class="quick-circle"><img src="image/msbte.jpg" alt="MSBTE" loading="lazy" width="50" height="50"></div><div class="quick-name">MSBTE</div></a>
+    <a href="https://dte.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" class="quick-item" data-aos="fade-in" data-aos-delay="300" aria-label="DTE - Opens in new tab"><div class="quick-circle"><img src="image/dte.jpg" alt="DTE" loading="lazy" width="50" height="50"></div><div class="quick-name">DTE</div></a>
+    <a href="https://mahadbt.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" class="quick-item" data-aos="fade-in" data-aos-delay="400" aria-label="MAHADBT - Opens in new tab"><div class="quick-circle"><img src="image/mahadbt.png" alt="MAHADBT" loading="lazy" width="50" height="50"></div><div class="quick-name">MAHADBT</div></a>
+    <a href="https://www.abc.gov.in/" target="_blank" rel="noopener noreferrer" class="quick-item" data-aos="fade-in" data-aos-delay="500" aria-label="ABC - Opens in new tab"><div class="quick-circle"><img src="image/abc.png" alt="ABC" loading="lazy" width="50" height="50"></div><div class="quick-name">ABC</div></a>
+</div>
+
+<!-- VISION MISSION -->
+<section class="vision-mission">
+    <div class="vision-box" data-aos="fade-up" data-aos-delay="100"><h2 data-en="Vision" data-mr="दृष्टिकोन">Vision</h2><p data-en="To ensure sustainable human development, encourage a self-reliant and self-content society, and promote community service and social welfare through quality education at affordable cost." data-mr="शाश्वत मानव विकास सुनिश्चित करणे, आत्मनिर्भर व समाधानी समाज घडवणे, आणि परवडणाऱ्या खर्चात गुणवत्तापूर्ण शिक्षणाद्वारे समाजसेवा व सामाजिक कल्याणाला चालना देणे.">To ensure sustainable human development, encourage a self-reliant and self-content society, and promote community service and social welfare through quality education at affordable cost.</p></div>
+    <div class="mission-box" data-aos="fade-up" data-aos-delay="200"><h2 data-en="Mission" data-mr="ध्येय">Mission</h2><p data-en="To impart state-of-the-art education and technical expertise to students, provide necessary training to teachers, and build a responsible, self-reliant society through high-quality academic programs and ethical participation in public life." data-mr="विद्यार्थ्यांना अत्याधुनिक शिक्षण व तांत्रिक प्रावीण्य देणे, शिक्षकांना आवश्यक प्रशिक्षण उपलब्ध करणे, आणि उच्च दर्जाचे शैक्षणिक कार्यक्रम तसेच नैतिक सामाजिक सहभाग यांद्वारे जबाबदार व आत्मनिर्भर समाज घडवणे.">To impart state-of-the-art education and technical expertise to students, provide necessary training to teachers, and build a responsible, self-reliant society through high-quality academic programs and ethical participation in public life.</p></div>
+</section>
+
+<!-- ANTI RAGGING -->
+<section class="ragging-strip" data-aos="fade-in"><p data-en="Suhas Institute of Technology strictly follows AICTE Anti-Ragging Guidelines to ensure a safe and secure campus for all students." data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी सर्व विद्यार्थ्यांसाठी सुरक्षित आणि संरक्षित कॅम्पस सुनिश्चित करण्यासाठी AICTE च्या अँटी-रॅगिंग मार्गदर्शक तत्त्वांचे काटेकोरपणे पालन करते.">Suhas Institute of Technology strictly follows AICTE Anti-Ragging Guidelines to ensure a safe and secure campus for all students.</p></section>
+
+<!-- PRINCIPAL MESSAGE -->
+<div class="principal-float" onclick="openModal()" role="button" tabindex="0" aria-label="Open Principal's Message" onkeypress="if(event.key==='Enter')openModal()" data-en="Principal's Message" data-mr="प्राचार्यांचा संदेश">Principal's Message</div>
+<div id="principalModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="principalModalTitle">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()" role="button" tabindex="0" aria-label="Close modal" onkeypress="if(event.key==='Enter')closeModal()">&times;</span>
+        <div class="principal-layout">
+            <div class="principal-photo"><img src="image/principal.png" alt="Principal" loading="lazy"></div>
+            <div class="principal-text">
+                <h2 id="principalModalTitle" data-en="Principal's Message" data-mr="प्राचार्यांचा संदेश">Principal's Message</h2>
+                <p data-en="At Suhas Institute of Technology, our mission is to nurture technically competent, innovative, and ethically responsible engineers. We focus on hands-on learning, industry exposure, and overall personality development to prepare our students for a bright future." data-mr="सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजीमध्ये आमचे ध्येय तांत्रिकदृष्ट्या सक्षम, नाविन्यपूर्ण आणि नैतिकदृष्ट्या जबाबदार अभियंते घडवणे आहे. प्रत्यक्ष शिक्षण, उद्योग संपर्क आणि सर्वांगीण व्यक्तिमत्त्व विकासावर आम्ही भर देतो, ज्यामुळे विद्यार्थ्यांचे भविष्य उज्ज्वल बनते.">At Suhas Institute of Technology, our mission is to nurture technically competent, innovative, and ethically responsible engineers. We focus on hands-on learning, industry exposure, and overall personality development to prepare our students for a bright future.</p>
+                <h4 data-en="- Principal, Suhas Institute of Technology" data-mr="- प्राचार्य, सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी">- Principal, Suhas Institute of Technology</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <p data-en="© 2026 Suhas Institute of Technology, Kasurdi. All Rights Reserved" data-mr="© 2026 सुहास इन्स्टिट्यूट ऑफ टेक्नॉलॉजी, कासुर्डी. सर्व हक्क राखीव">© 2026 Suhas Institute of Technology, Kasurdi. All Rights Reserved</p>
+        <p class="developer-credit">
+            <span class="credit-label"><i class="fas fa-code" aria-hidden="true"></i> <span data-en="Website Designed & Developed by" data-mr="वेबसाइट डिझाइन व विकसित:">Website Designed & Developed by</span></span>
+            <button type="button" class="developer-trigger" data-en="Mr. Sandesh B Burse" data-mr="श्री. संदेश बी. बुरसे">Mr. Sandesh B Burse</button>
+        </p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/suhas_insttitute" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/YOUR_ID" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- JS LIBRARIES (NO BOOTSTRAP JS) - Loaded with defer for performance -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js" defer></script>
+
+<!-- CUSTOM SCRIPTS - Loaded with defer for performance -->
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/modal.js" defer></script>
+<script src="assets/js/navbar.js" defer></script>
+<script src="assets/js/index.js" defer></script>
+<script src="assets/js/benefits.js" defer></script>
+<script src="assets/js/scroll-sections.js" defer></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

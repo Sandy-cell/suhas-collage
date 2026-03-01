@@ -1,0 +1,504 @@
+﻿/* ================= STAFF PAGE CSS ================= */
+/* Clean, Professional, Responsive Design - Same Theme */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= BREADCRUMB ================= */
+.breadcrumb-nav {
+    background: linear-gradient(135deg, #0b2c5a 0%, #1a3d6e 100%);
+    padding: 12px 0;
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-container a {
+    color: rgba(255,255,255,0.8);
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-container a:hover {
+    color: #f4b400;
+}
+
+.breadcrumb-container .separator {
+    color: rgba(255,255,255,0.5);
+}
+
+.breadcrumb-container .current {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ================= BANNER ================= */
+.banner {
+    height: 280px;
+    background: linear-gradient(135deg, rgba(11, 44, 90, 0.92), rgba(26, 61, 110, 0.88)),
+                url('../image/collage.png') center/cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.banner h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.banner p {
+    font-size: clamp(14px, 2vw, 18px);
+    opacity: 0.95;
+    max-width: 600px;
+}
+
+/* ================= STAFF CONTROLS ================= */
+.staff-controls {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fc 100%);
+    padding: 25px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0b2c5a;
+    font-size: 16px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    border: 2px solid #e0e6ed;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #fff;
+}
+
+.search-box input:focus {
+    border-color: #0b2c5a;
+    box-shadow: 0 0 0 4px rgba(11, 44, 90, 0.1);
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+/* ================= TABS ================= */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: #555;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e0e6ed;
+}
+
+.tab-btn:hover {
+    background: #0b2c5a;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(11, 44, 90, 0.25);
+    border-color: #0b2c5a;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #0b2c5a, #1a3d6e);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(11, 44, 90, 0.3);
+    border-color: #0b2c5a;
+}
+
+/* ================= STAFF SECTION ================= */
+.staff-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #0b2c5a;
+    margin-bottom: 12px;
+    font-size: clamp(20px, 3vw, 28px);
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-header h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: #f4b400;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+/* ================= DEPARTMENT ================= */
+.dept {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.dept.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= STAFF GRID ================= */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ================= STAFF CARD ================= */
+.staff-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.staff-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.staff-card.hod {
+    border: 2px solid #f4b400;
+}
+
+.hod-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #f4b400, #ffc107);
+    color: #0b2c5a;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(244, 180, 0, 0.4);
+}
+
+/* STAFF PHOTO */
+.staff-photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fc, #eef2ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.staff-photo img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #0b2c5a;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.staff-card:hover .staff-photo img {
+    transform: scale(1.05);
+    border-color: #f4b400;
+    box-shadow: 0 8px 25px rgba(244, 180, 0, 0.3);
+}
+
+/* STAFF INFO */
+.staff-info {
+    padding: 20px;
+}
+
+.staff-info h3 {
+    font-size: 16px;
+    color: #0b2c5a;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.staff-info .designation {
+    font-size: 13px;
+    color: #f4b400;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.staff-info .qualification {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #082040;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.dev-popup {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f4b400 !important;
+    margin-top: 10px !important;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-icons a:hover {
+    background: #f4b400;
+    transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+    .staff-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 220px;
+    }
+    
+    .staff-section {
+        padding: 30px 15px;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-header h2 {
+        font-size: 22px;
+    }
+    
+    .tabs {
+        gap: 8px;
+    }
+    
+    .tab-btn {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+    
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .staff-photo {
+        height: 180px;
+    }
+    
+    .staff-photo img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .staff-info {
+        padding: 15px;
+    }
+    
+    .staff-info h3 {
+        font-size: 14px;
+    }
+    
+    .staff-info .designation {
+        font-size: 12px;
+    }
+    
+    .staff-info .qualification {
+        font-size: 11px;
+    }
+    
+    .breadcrumb-container {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .banner p {
+        font-size: 14px;
+    }
+    
+    .staff-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .tabs {
+        gap: 6px;
+    }
+    
+    .tab-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    .search-box input {
+        padding: 12px 20px 12px 42px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner {
+        height: 180px;
+    }
+    
+    .banner h1 {
+        font-size: 20px;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
+

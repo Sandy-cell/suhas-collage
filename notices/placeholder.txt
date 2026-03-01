@@ -1,0 +1,21 @@
+/*
+NOTICE BOARD - PDF FILES FOLDER
+================================
+
+Place all your notice PDF files in this folder.
+
+File naming convention:
+- admission.pdf
+- exam.pdf
+- event.pdf
+- holiday.pdf
+- scholarship.pdf
+- industrial.pdf
+
+The links in the Notice Board section will automatically point to these files.
+
+Example:
+- notices/admission.pdf
+- notices/exam.pdf
+- etc.
+*/

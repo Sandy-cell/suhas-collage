@@ -1,0 +1,316 @@
+/* ================= COMMON CSS VARIABLES ================= */
+:root {
+    --primary: #0b2c5a;
+    --primary-dark: #082040;
+    --primary-light: #1a3d6e;
+    --accent: #f4b400;
+    --accent-light: #ffc107;
+    --blue: #0077ff;
+    --text: #333;
+    --text-light: #666;
+    --bg: #f4f6f9;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-md: 0 8px 25px rgba(0,0,0,0.12);
+    --shadow-lg: 0 15px 40px rgba(0,0,0,0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= COMMON UTILITIES ================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ================= BUTTON STYLES ================= */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ================= CARD STYLES ================= */
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ================= BREADCRUMB ================= */
+.breadcrumb-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 12px 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb .separator {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+}
+
+.breadcrumb .current {
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* ================= BREADCRUMB (DEPARTMENT PAGES) ================= */
+.breadcrumb-nav {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 12px 0;
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-container a {
+    color: rgba(255,255,255,0.8);
+    transition: var(--transition);
+}
+
+.breadcrumb-container a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb-container .separator {
+    color: rgba(255,255,255,0.5);
+}
+
+.breadcrumb-container .current {
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+    padding: 50px 0 60px;
+    border-bottom: 3px solid var(--accent);
+}
+
+.page-title-section h1 {
+    font-size: 36px;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-title-section p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.developer-credit {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.credit-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.credit-label i {
+    color: var(--accent);
+}
+
+footer .developer-credit .developer-trigger {
+    background: linear-gradient(135deg, #ffd166, #ffb703);
+    border-color: #ffb703;
+    color: #2b1a00;
+}
+
+footer .developer-credit .developer-trigger:hover,
+footer .developer-credit .developer-trigger:focus-visible {
+    background: linear-gradient(135deg, #ffe08a, #ffc933);
+    color: #1f1400;
+}
+
+.dev-popup {
+    font-size: 12px !important;
+    opacity: 0.7 !important;
+    margin-bottom: 15px !important;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    .page-title-section h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 30px 0;
+    }
+    
+    .page-title-section h1 {
+        font-size: 24px;
+    }
+    
+    .page-title-section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .breadcrumb {
+        font-size: 12px;
+    }
+}

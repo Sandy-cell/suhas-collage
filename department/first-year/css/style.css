@@ -1,0 +1,158 @@
+/* First Year Department - Custom Styles */
+
+/* CSS Variables */
+:root {
+    --primary: #0b2c5a;
+    --primary-dark: #082040;
+    --primary-light: #1a3d6e;
+    --accent: #f4b400;
+    --accent-light: #ffc107;
+    --blue: #0077ff;
+    --text: #333;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Noto Serif', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navbar Override */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    width: auto;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Section Title */
+.section-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 500;
+}
+
+/* Faculty Images */
+.card-body img {
+    object-fit: cover;
+    border: 3px solid var(--primary);
+}
+
+/* List Items */
+.card-body ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.card-body ul li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation Helper Classes */
+.animate__animated {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Image Loading */
+img[loading="lazy"] {
+    loading: lazy;
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .animate__animated {
+        display: none !important;
+    }
+    
+    .page-header {
+        padding: 20px 0;
+    }
+}

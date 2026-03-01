@@ -1,0 +1,259 @@
+/* =====================================================
+   ACADEMIC PAGE STYLES - Page-specific only
+   Common styles (breadcrumb, footer, page-title, variables) in common.css
+   ===================================================== */
+
+/* ================= COURSES SECTION ================= */
+.courses-section {
+    padding: 60px 0;
+    background: var(--bg);
+}
+
+.courses-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.table-wrapper {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.courses-table thead {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.courses-table thead th {
+    padding: 18px 20px;
+    text-align: center;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.courses-table thead th:first-child {
+    text-align: center;
+    width: 80px;
+}
+
+.courses-table tbody tr {
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.courses-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.courses-table tbody tr:hover {
+    background: rgba(11, 44, 90, 0.05);
+}
+
+.courses-table tbody td {
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.courses-table tbody td:first-child {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.courses-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* ================= NOTE BOX ================= */
+.note-box {
+    background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.note-box h4 {
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.note-box h4 i {
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.note-box p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ================= WHY CHOOSE SECTION ================= */
+.why-choose-section {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.why-choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.why-choose-section h2 {
+    font-size: 32px;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 45px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.why-choose-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.choose-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.choose-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: var(--transition);
+}
+
+.choose-card:hover .choose-icon {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+}
+
+.choose-icon i {
+    font-size: 28px;
+    color: var(--white);
+}
+
+.choose-card h3 {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.choose-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Responsive handled by common.css */
+
+/* ================= ALIGNMENT + MOTION TUNING ================= */
+.page-title-section {
+    overflow: hidden;
+}
+
+.page-title-container {
+    text-align: center;
+}
+
+.page-title-section h1 {
+    min-height: 1.2em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.courses-table th,
+.courses-table td {
+    vertical-align: middle;
+}
+
+.choose-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 280px;
+}
+
+.choose-card p {
+    margin-top: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .page-title-container h1 {
+        animation: heroFloat 3.2s ease-in-out infinite alternate;
+    }
+
+    .choose-icon {
+        animation: iconPulse 2.8s ease-in-out infinite;
+    }
+}
+
+@keyframes heroFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-3px); }
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+/* If AOS library is unavailable, keep content visible */
+.no-aos [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}

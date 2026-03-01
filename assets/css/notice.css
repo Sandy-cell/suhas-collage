@@ -1,0 +1,43 @@
+/* ================= NOTICE BOARD ================= */
+.notice-board .notice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.notice-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.notice-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.notice-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 9px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.notice-card.latest .facility-icon i,
+.notice-card.important .facility-icon i {
+    color: var(--blue);
+}
+
+@media (max-width: 992px) {
+    .notice-board .notice-grid {
+        grid-template-columns: 1fr;
+    }
+}
