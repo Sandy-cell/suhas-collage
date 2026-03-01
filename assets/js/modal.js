@@ -45,7 +45,7 @@
         ].join('');
 
         const avatar = modalOverlay.querySelector('.dev-modal-avatar img');
-      avatar.src = resolveAssetPath("./image/mr-sandesh-b-burse.png");
+      avatar.src = resolveAssetPath('../../mr-sandesh-b-burse.png');
 
         document.body.appendChild(modalOverlay);
     }
