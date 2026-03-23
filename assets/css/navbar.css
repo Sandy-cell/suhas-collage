@@ -1,0 +1,711 @@
+/* =====================================================
+   SUHAS INSTITUTE OF TECHNOLOGY - NAVBAR STYLES
+   Professional College Theme: Navy Blue (#0A2540), White (#FFFFFF), Light Gold (#D4AF37)
+   ===================================================== */
+
+/* CSS Variables - Updated with new professional theme */
+:root {
+    --nav-primary: #0A2540;
+    --nav-primary-dark: #061829;
+    --nav-primary-light: #143a5e;
+    --nav-primary-medium: #0d3251;
+    --nav-accent: #D4AF37;
+    --nav-accent-light: #e5c565;
+    --nav-accent-dark: #b8962e;
+    --nav-blue: #0077ff;
+    --nav-white: #ffffff;
+    --nav-text: #333;
+    --nav-text-light: #666;
+    --nav-shadow: rgba(10, 37, 64, 0.4);
+    --nav-shadow-light: rgba(10, 37, 64, 0.25);
+    --nav-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --nav-transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= NAVBAR MAIN ================= */
+.navbar-main {
+    background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-light) 50%, var(--nav-primary) 100%);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 20px var(--nav-shadow);
+    border-bottom: 3px solid var(--nav-accent);
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.nav-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ================= HAMBURGER MENU ================= */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10001;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--nav-white);
+    border-radius: 2px;
+    transition: var(--nav-transition);
+    transform-origin: center;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ================= NAV MENU ================= */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0;
+}
+
+/* Nav Link Base */
+.nav-link {
+    color: var(--nav-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: var(--nav-transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Professional hover effect with underline animation */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: var(--nav-accent);
+    transform: scaleX(0);
+    transition: transform var(--nav-transition);
+    transform-origin: center;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity var(--nav-transition);
+}
+
+/* Hover Effects */
+.nav-link:hover {
+    color: var(--nav-accent);
+    background: transparent;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+/* Active Link */
+.nav-link.active,
+.nav-link:active {
+    color: var(--nav-accent);
+    background: rgba(212, 175, 55, 0.15);
+}
+
+.nav-link.active::before,
+.nav-link:active::before {
+    transform: scaleX(1);
+    background: var(--nav-accent);
+}
+
+/* Arrow Icon */
+.nav-link i.fa-chevron-down {
+    font-size: 9px;
+    transition: transform 0.3s ease;
+}
+
+.has-dropdown:hover .nav-link i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Home Link - Special Style with Gold Theme */
+.nav-item:first-child .nav-link {
+    background: linear-gradient(135deg, var(--nav-accent), var(--nav-accent-light));
+    color: var(--nav-primary);
+    font-weight: 700;
+    border: none;
+}
+
+.nav-item:first-child .nav-link::before {
+    display: none;
+}
+
+.nav-item:first-child .nav-link::after {
+    display: none;
+}
+
+.nav-item:first-child .nav-link:hover {
+    background: linear-gradient(135deg, var(--nav-accent-light), #f0d78a);
+    transform: translateY(-2px);
+    color: var(--nav-primary);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* ================= DROPDOWN ================= */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 9px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: var(--nav-white);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(10, 37, 64, 0.25);
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10001;
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid rgba(10, 37, 64, 0.08);
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(10, 37, 64, 0.05);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--nav-primary);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.dropdown-menu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--nav-accent);
+    transform: scaleY(0);
+    transition: transform 0.25s ease;
+}
+
+.dropdown-menu a:hover {
+    background: linear-gradient(135deg, rgba(10, 37, 64, 0.03) 0%, rgba(10, 37, 64, 0.08) 100%);
+    color: var(--nav-primary);
+    padding-left: 26px;
+    padding-right: 16px;
+}
+
+.dropdown-menu a:hover::before {
+    transform: scaleY(1);
+}
+
+.dropdown-menu a i {
+    width: 20px;
+    text-align: center;
+    color: var(--nav-accent);
+    font-size: 14px;
+    transition: color 0.25s ease;
+}
+
+.dropdown-menu a:hover i {
+    color: var(--nav-primary);
+}
+
+/* Desktop - Hover for dropdown */
+@media (min-width: 993px) {
+    .has-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .has-dropdown:hover .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+}
+
+/* ================= LANGUAGE TOGGLE ================= */
+.nav-lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-lang:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: var(--nav-accent);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.nav-lang .lang-btn {
+    color: var(--nav-white);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 35px;
+    text-align: center;
+}
+
+.lang-btn.inactive {
+    opacity: 0.5;
+}
+
+/* Professional Toggle Switch */
+.lang-switch {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    display: inline-block;
+}
+
+.lang-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.lang-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-light) 100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 26px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.lang-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2px;
+    background: linear-gradient(135deg, var(--nav-accent), var(--nav-accent-light));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Toggle checked state - Marathi active */
+.lang-switch input:checked + .lang-slider {
+    background: linear-gradient(135deg, var(--nav-accent) 0%, var(--nav-accent-light) 100%);
+    border-color: var(--nav-primary);
+}
+
+.lang-switch input:checked + .lang-slider:before {
+    transform: translateX(22px);
+    background: linear-gradient(135deg, var(--nav-primary) 0%, var(--nav-primary-light) 100%);
+}
+
+/* Focus state for accessibility */
+.lang-switch input:focus + .lang-slider {
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+/* ================= MOBILE NAV OVERLAY ================= */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 37, 64, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Body scroll lock */
+body.nav-open {
+    overflow: hidden;
+}
+
+/* ================= RESPONSIVE - TABLET & MOBILE ================= */
+@media (max-width: 992px) {
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    /* Keep close (X) fixed at top-right when menu is open */
+    .hamburger.active {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        left: auto;
+        z-index: 10002;
+    }
+    
+    /* Language toggle positioning */
+    .nav-lang {
+        order: 2;
+        margin-left: auto;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+    
+    /* Mobile Menu Container */
+    .nav-menu {
+        display: none;
+        width: 300px;
+        max-width: 85%;
+        background: linear-gradient(180deg, var(--nav-primary) 0%, var(--nav-primary-dark) 100%);
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        height: calc(100vh - 55px);
+        max-height: calc(100vh - 55px);
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 10000;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        transform: translateX(0);
+    }
+    
+    /* Nav Items */
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        margin: 0;
+    }
+    
+    /* Nav Links */
+    .nav-link {
+        width: 100%;
+        padding: 18px 24px;
+        justify-content: space-between;
+        font-size: 15px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link::before {
+        display: none;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link:hover {
+        background: rgba(212, 175, 55, 0.15);
+        padding-left: 30px;
+        color: var(--nav-accent);
+    }
+    
+    .nav-link.active {
+        background: rgba(212, 175, 55, 0.2);
+        color: var(--nav-accent);
+    }
+    
+    /* Mobile Dropdown - Click to Toggle */
+    .dropdown-menu {
+        position: static;
+        transform: none !important;
+        background: rgba(6, 24, 41, 0.95);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .has-dropdown.active .dropdown-menu {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    
+    .dropdown-menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .dropdown-menu a {
+        color: var(--nav-white);
+        padding: 16px 30px 16px 45px;
+        box-sizing: border-box;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    
+    .dropdown-menu a::before {
+        display: none;
+    }
+    
+    .dropdown-menu a i {
+        color: var(--nav-accent);
+    }
+    
+    .dropdown-menu a:hover {
+        background: rgba(212, 175, 55, 0.15);
+        padding-left: 52px;
+        color: var(--nav-accent);
+    }
+    
+    .dropdown-menu a:hover i {
+        color: var(--nav-accent);
+    }
+    
+    /* Dropdown Arrow */
+    .dropdown-toggle::after {
+        content: '\f054';
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+    
+    .has-dropdown.active .dropdown-toggle::after {
+        transform: rotate(90deg);
+    }
+    
+    /* Home Link Mobile */
+    .nav-item:first-child .nav-link {
+        background: linear-gradient(135deg, var(--nav-accent), var(--nav-accent-light));
+        color: var(--nav-primary) !important;
+    }
+    
+    .nav-item:first-child .nav-link:hover {
+        background: linear-gradient(135deg, var(--nav-accent-light), #f0d78a);
+        color: var(--nav-primary) !important;
+    }
+    
+    .nav-main-container {
+        padding: 0 15px;
+    }
+    
+    /* Dropdown arrow touch target */
+    .dropdown-toggle {
+        padding-right: 30px !important;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 576px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 16px 20px;
+    }
+    
+    .nav-link:hover {
+        padding-left: 26px;
+    }
+    
+    .nav-lang {
+        padding: 5px 10px;
+        gap: 6px;
+    }
+    
+    .nav-lang .lang-btn {
+        font-size: 12px;
+        min-width: 28px;
+    }
+    
+    .lang-switch {
+        width: 42px;
+        height: 22px;
+    }
+    
+    .lang-slider:before {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .lang-switch input:checked + .lang-slider:before {
+        transform: translateX(20px);
+    }
+    
+    .dropdown-menu a {
+        padding: 14px 28px 14px 42px;
+        font-size: 13px;
+    }
+    
+    .dropdown-menu a:hover {
+        padding-left: 48px;
+    }
+    
+    /* Smaller hamburger for small screens */
+    .hamburger {
+        width: 26px;
+        height: 22px;
+    }
+    
+    .nav-menu {
+        width: 85%;
+        max-width: 320px;
+    }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+    .nav-link,
+    .dropdown-menu,
+    .hamburger span,
+    .lang-slider,
+    .lang-slider:before,
+    .nav-menu {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Focus visible for keyboard navigation */
+.nav-link:focus-visible,
+.hamburger:focus-visible,
+.dropdown-menu a:focus-visible {
+    outline: 2px solid var(--nav-accent);
+    outline-offset: 2px;
+}
+
+/* ================= BOOTSTRAP OVERRIDE ================= */
+/* Prevent Bootstrap from controlling navbar dropdowns */
+.navbar-main .dropdown, 
+.navbar-main .dropup, 
+.navbar-main .dropend, 
+.navbar-main .dropstart { 
+    position: relative; 
+}
+
+.navbar-main .dropdown-toggle::after { 
+    display: inline-block !important; 
+}
+
+.navbar-main .dropdown-menu { 
+    display: block !important;
+}
+
+.navbar-main .dropdown-item { 
+    display: flex !important; 
+}

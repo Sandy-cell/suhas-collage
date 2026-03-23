@@ -1,0 +1,154 @@
+/* ================= BENEFITS ================= */
+/* Professional College Theme: Navy Blue (#0A2540), White (#FFFFFF), Light Gold Accent (#D4AF37) */
+.benefits-section {
+    background: linear-gradient(135deg, #f4f6f9 0%, #eef2ff 100%);
+    padding: 48px 20px 36px;
+}
+
+.benefits-header h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.benefits-row {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    background: var(--white);
+    border: 1px solid #e6eaf0;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    padding: 24px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.28s ease, transform 0.28s ease, background 0.28s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(14px);
+    will-change: transform, opacity;
+}
+
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(10, 37, 64, 0.14);
+    background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 4px;
+    transition: var(--transition);
+}
+
+.benefit-icon i {
+    color: var(--primary);
+    font-size: 22px;
+    line-height: 1;
+    transition: transform 0.24s ease;
+    will-change: transform;
+}
+
+.benefit-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-card:hover,
+.benefit-card:focus-visible,
+.benefit-card.active {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.benefit-card:hover .benefit-icon {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    box-shadow: var(--glow-gold);
+}
+
+.benefit-card:hover .benefit-icon i {
+    color: var(--primary);
+}
+
+.benefit-card.icon-animate .benefit-icon i {
+    transform: scale(1.08);
+}
+
+.benefit-name {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+}
+
+.benefit-desc {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .benefits-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-section {
+        padding: 32px 15px 24px;
+    }
+
+    .benefits-header h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        max-width: 380px;
+    }
+
+    .benefit-card {
+        padding: 18px 16px;
+    }
+
+    .benefit-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .benefit-icon i {
+        font-size: 20px;
+    }
+
+    .benefit-name {
+        font-size: 17px;
+    }
+
+    .benefit-desc {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .benefit-card {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

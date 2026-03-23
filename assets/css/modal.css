@@ -1,0 +1,209 @@
+/* ================= DEVELOPER MODAL ================= */
+.developer-trigger {
+    background: linear-gradient(135deg, rgba(11, 44, 90, 0.12), rgba(26, 61, 110, 0.12));
+    border: 1px solid rgba(11, 44, 90, 0.22);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin: 0;
+    font: inherit;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.developer-trigger:hover,
+.developer-trigger:focus-visible {
+    background: linear-gradient(135deg, rgba(11, 44, 90, 0.2), rgba(26, 61, 110, 0.2));
+    box-shadow: 0 6px 14px rgba(11, 44, 90, 0.18);
+    transform: translateY(-1px);
+    color: var(--primary);
+}
+
+/* Better contrast for dark footer/dev text areas */
+footer .developer-trigger,
+.dev-popup .developer-trigger {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.34);
+    color: var(--accent-light);
+}
+
+footer .developer-trigger:hover,
+footer .developer-trigger:focus-visible,
+.dev-popup .developer-trigger:hover,
+.dev-popup .developer-trigger:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
+    color: var(--accent);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.dev-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 15, 35, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 12000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.24s ease, visibility 0.24s ease;
+}
+
+.dev-modal-open {
+    overflow: hidden;
+}
+
+.dev-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dev-modal-card {
+    width: min(420px, 100%);
+    background: var(--white);
+    border-radius: 14px;
+    border: 1px solid rgba(11, 44, 90, 0.12);
+    box-shadow: 0 18px 40px rgba(11, 44, 90, 0.35);
+    position: relative;
+    padding: 28px 24px 24px;
+    text-align: center;
+    transform: scale(0.96);
+    opacity: 0;
+    transition: transform 0.24s ease, opacity 0.24s ease;
+}
+
+.dev-modal-overlay.is-open .dev-modal-card {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.dev-modal-overlay.is-closing .dev-modal-card {
+    transform: scale(0.98);
+    opacity: 0;
+}
+
+.dev-modal-close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--primary);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.dev-modal-close:hover,
+.dev-modal-close:focus-visible {
+    background: rgba(11, 44, 90, 0.08);
+}
+
+.dev-modal-avatar {
+    width: 98px;
+    height: 98px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(11, 44, 90, 0.25);
+}
+
+.dev-modal-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dev-modal-name {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.dev-modal-designation {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.dev-modal-role {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 0 0 14px;
+}
+
+.dev-modal-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(11, 44, 90, 0.08);
+    border-radius: 999px;
+    padding: 8px 14px;
+}
+
+.dev-modal-actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.dev-call-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid rgba(11, 44, 90, 0.2);
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.dev-call-btn:hover,
+.dev-call-btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(11, 44, 90, 0.2);
+}
+
+@media (max-width: 576px) {
+    .dev-modal-card {
+        padding: 24px 18px 20px;
+    }
+
+    .dev-modal-name {
+        font-size: 21px;
+    }
+
+    .dev-modal-designation,
+    .dev-modal-role,
+    .dev-modal-phone {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dev-modal-overlay,
+    .dev-modal-card {
+        transition: none !important;
+    }
+}

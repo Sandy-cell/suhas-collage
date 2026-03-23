@@ -1,0 +1,583 @@
+﻿/* =====================================================
+   STAFF PAGE CSS - Enhanced Premium Theme
+   Suhas Institute of Technology
+   Professional College Theme: Navy Blue (#0A2540), White (#FFFFFF), Light Gold (#D4AF37)
+   ===================================================== */
+
+/* ================= CSS VARIABLES - Updated Premium Theme ================= */
+:root {
+    /* Primary Colors - Navy Blue Theme */
+    --primary: #0A2540;
+    --primary-dark: #061829;
+    --primary-light: #143a5e;
+    --primary-medium: #0d3251;
+    
+    /* Accent Colors - Light Gold */
+    --accent: #D4AF37;
+    --accent-light: #e5c565;
+    --accent-dark: #b8962e;
+    
+    /* Additional Colors */
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #f4f6f9;
+    --white: #ffffff;
+    
+    /* Shadows - Enhanced for depth */
+    --shadow-xs: 0 1px 3px rgba(10, 37, 64, 0.08);
+    --shadow-sm: 0 2px 8px rgba(10, 37, 64, 0.1);
+    --shadow-md: 0 8px 25px rgba(10, 37, 64, 0.12);
+    --shadow-lg: 0 15px 40px rgba(10, 37, 64, 0.15);
+    --shadow-xl: 0 20px 50px rgba(10, 37, 64, 0.18);
+    
+    /* Gold glow effect */
+    --glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+    
+    /* Transitions - Smooth 0.3s-0.5s */
+    --transition-fast: all 0.2s ease;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= BREADCRUMB ================= */
+.breadcrumb-nav {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 14px 0;
+    border-bottom: 2px solid var(--accent);
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-container a {
+    color: rgba(255,255,255,0.85);
+    transition: var(--transition);
+}
+
+.breadcrumb-container a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb-container .separator {
+    color: rgba(255,255,255,0.5);
+}
+
+.breadcrumb-container .current {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* ================= BANNER ================= */
+.banner {
+    height: 300px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 25px;
+    border-bottom: 4px solid var(--accent);
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.banner h1 {
+    font-size: clamp(30px, 5vw, 44px);
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.banner p {
+    font-size: clamp(14px, 2vw, 18px);
+    opacity: 0.95;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= STAFF CONTROLS ================= */
+.staff-controls {
+    background: var(--white);
+    padding: 28px 25px;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(10, 37, 64, 0.08);
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 22px;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 22px 14px 50px;
+    border: 2px solid rgba(10, 37, 64, 0.1);
+    border-radius: 30px;
+    font-size: 15px;
+    transition: var(--transition-smooth);
+    outline: none;
+    background: var(--bg);
+}
+
+.search-box input:focus {
+    border-color: var(--accent);
+    box-shadow: var(--glow-gold);
+    background: var(--white);
+}
+
+.search-box input::placeholder {
+    color: var(--text-light);
+}
+
+/* ================= TABS ================= */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tab-btn {
+    padding: 12px 26px;
+    border: none;
+    background: var(--white);
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition-smooth);
+    color: var(--text-light);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(10, 37, 64, 0.08);
+}
+
+.tab-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--primary);
+    box-shadow: var(--glow-gold);
+    border-color: var(--accent);
+    font-weight: 700;
+}
+
+/* ================= STAFF SECTION ================= */
+.staff-section {
+    padding: 60px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f4f6f9 0%, #eef2f7 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-header h2 {
+    color: var(--primary);
+    margin-bottom: 14px;
+    font-size: clamp(22px, 3vw, 30px);
+    position: relative;
+    padding-bottom: 16px;
+    font-weight: 700;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+/* ================= DEPARTMENT ================= */
+.dept {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.dept.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= STAFF GRID ================= */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+/* ================= STAFF CARD ================= */
+.staff-card {
+    background: var(--white);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(10, 37, 64, 0.06);
+}
+
+.staff-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent);
+}
+
+.staff-card.hod {
+    border: 2px solid var(--accent);
+}
+
+.hod-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--primary);
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: var(--glow-gold);
+}
+
+/* STAFF PHOTO */
+.staff-photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.staff-photo img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-md);
+}
+
+.staff-card:hover .staff-photo img {
+    transform: scale(1.08);
+    border-color: var(--accent);
+    box-shadow: var(--glow-gold);
+}
+
+/* STAFF INFO */
+.staff-info {
+    padding: 22px;
+}
+
+.staff-info h3 {
+    font-size: 17px;
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.staff-info .designation {
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.staff-info .qualification {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    padding: 30px 25px;
+    border-top: 3px solid var(--accent);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.dev-popup {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent) !important;
+    margin-top: 12px !important;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.social-icons a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: var(--glow-gold);
+}
+
+/* ================= ANIMATIONS ================= */
+@media (prefers-reduced-motion: no-preference) {
+    .banner h1 {
+        animation: bannerFloat 3s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes bannerFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+    .staff-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 240px;
+    }
+    
+    .staff-section {
+        padding: 40px 20px;
+    }
+    
+    .section-header {
+        margin-bottom: 35px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .tabs {
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+    
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    
+    .staff-photo {
+        height: 180px;
+    }
+    
+    .staff-photo img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .staff-info {
+        padding: 18px;
+    }
+    
+    .staff-info h3 {
+        font-size: 15px;
+    }
+    
+    .staff-info .designation {
+        font-size: 13px;
+    }
+    
+    .breadcrumb-container {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        height: 200px;
+    }
+    
+    .banner h1 {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+    
+    .banner p {
+        font-size: 14px;
+    }
+    
+    .staff-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .tabs {
+        gap: 8px;
+    }
+    
+    .tab-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    .search-box input {
+        padding: 12px 20px 12px 44px;
+        font-size: 14px;
+    }
+    
+    .staff-controls {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner {
+        height: 180px;
+    }
+    
+    .banner h1 {
+        font-size: 22px;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
